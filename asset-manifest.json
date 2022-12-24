@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/frontend/static/css/main.2be85f31.css",
-    "main.js": "/frontend/static/js/main.4d7115fc.js",
+    "main.js": "/frontend/static/js/main.fc3f6617.js",
     "static/js/787.313f0a3b.chunk.js": "/frontend/static/js/787.313f0a3b.chunk.js",
     "static/media/Stats.png": "/frontend/static/media/Stats.72adfc796e151534047b.png",
     "static/media/newsCoin.png": "/frontend/static/media/newsCoin.f77c2c045d0c37aaf089.png",
@@ -41,11 +41,11 @@
     "static/media/Left.svg": "/frontend/static/media/Left.a16ec3c5bdd5cc120effc74e22c781e0.svg",
     "static/media/Right.svg": "/frontend/static/media/Right.e17876355d9c7bb6232f1670003af19e.svg",
     "main.2be85f31.css.map": "/frontend/static/css/main.2be85f31.css.map",
-    "main.4d7115fc.js.map": "/frontend/static/js/main.4d7115fc.js.map",
+    "main.fc3f6617.js.map": "/frontend/static/js/main.fc3f6617.js.map",
     "787.313f0a3b.chunk.js.map": "/frontend/static/js/787.313f0a3b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2be85f31.css",
-    "static/js/main.4d7115fc.js"
+    "static/js/main.fc3f6617.js"
   ]
 }
