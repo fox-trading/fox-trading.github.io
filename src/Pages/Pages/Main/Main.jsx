@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
 import { Button, Modal } from "antd";
 
 import ButtonCustom from "../../../Components/Button/Button";
@@ -34,16 +33,20 @@ const Main = () => {
     setOpenSecond(false);
   };
 
-  const { t, i18n } = useTranslation();
+
   return (
     <div className="main">
       <div className="main_content">
         <div className="main_list">
-          <div className="main_content__name">{t("main_trade")}</div>
-          <div className="main_content__text">{t("main_text")}</div>
+          <div className="main_content__name">
+            FOX TRADERS
+          </div>
+          <div className="main_content__text">
+            Сообщество профессиональных трейдеров. Обучение прошли более сотни человек. Трейдинг это лучшая работа в мире!
+          </div>
 
           <div className="main_content__join" onClick={showModal}>
-            <ButtonCustom text={t("main_join")} />
+            <ButtonCustom text={'Вступай в наши ряды'} />
           </div>
 
           <div className="main_box">

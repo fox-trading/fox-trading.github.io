@@ -23,7 +23,7 @@ const NewsMain = ({ news, header, footer, button }) => {
               {news.map((item, i) => (
                 <NewsBox
                   key={i}
-                  text={item.text}
+                  text={item.title}
                   source={item.source}
                   time={item.time}
                   img={item.img}

@@ -4,7 +4,6 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./Helpers/ScrollToTop";
-import "./18n";
 
 import App from "./App";
 import "./index.scss";

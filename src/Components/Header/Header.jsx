@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-
-import { useTranslation } from "react-i18next";
-
 import { Link, NavLink } from "react-router-dom";
 import { Drawer } from "antd";
 import { ReactComponent as Logo } from "../../Imgs/Logo.svg";
@@ -17,10 +14,6 @@ const Header = () => {
   };
   const onClose = () => {
     setOpen(false);
-  };
-  const { t, i18n } = useTranslation();
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
   };
 
   const setActive = ({ isActive }) =>
@@ -43,23 +36,23 @@ const Header = () => {
           <div className="drawer_nav_content">
             <div className="drawer_nav_content_sub">
               <NavLink to="/courses" className={setActive}>
-                {t("nav_course")}
+                Курсы
               </NavLink>
               <NavLink to="/news" className={setActive}>
-                {t("nav_news")}
+                Новости
               </NavLink>
             </div>
             <div className="nav_content__text nav_content__text_drawer disabled">
-              {t("nav_statistics")}
+              Статистика
             </div>
             <div className="nav_content__text nav_content__text_drawer disabled">
-              {t("nav_about")}
+              О нас
             </div>
             <div className="nav_content__text nav_content__text_drawer disabled">
-              {t("nav_calc")}
+              Калькулятор
             </div>
             <div className="nav_content__text nav_content__text_drawer disabled">
-              {t("nav_shirt")}
+              Мерч
             </div>
           </div>
           {/* <div className="drawer_nav_content__t">
@@ -70,17 +63,17 @@ const Header = () => {
 
         <div className="nav_content">
           <NavLink to="/courses" className={setActive}>
-            {t("nav_course")}
+            Курсы
           </NavLink>
           <NavLink to="/news" className={setActive}>
-            {t("nav_news")}
+            Новости
           </NavLink>
           <div className="nav_content__text disabled">
-            {t("nav_statistics")}
+            Статистика
           </div>
-          <div className="nav_content__text disabled">{t("nav_about")}</div>
-          <div className="nav_content__text disabled">{t("nav_calc")}</div>
-          <div className="nav_content__text disabled">{t("nav_shirt")}</div>
+          <div className="nav_content__text disabled">О нас</div>
+          <div className="nav_content__text disabled">Калькулятор</div>
+          <div className="nav_content__text disabled">Мерч</div>
         </div>
         {/* <div className="nav_content__t">
           <SelectSmall onClick={() => changeLanguage("ru")} />
