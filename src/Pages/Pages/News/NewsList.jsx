@@ -6,8 +6,8 @@ import { useNewsHook } from "../../../Hooks/useNewsHook";
 import "./NewsList.scss";
 
 const NewsList = ({ news, header, footer, button }) => {
-  const {news: fetchedNews} = useNewsHook();
-  console.log('fetchedNews', fetchedNews);
+  // const {news: fetchedNews} = useNewsHook();
+  // console.log('fetchedNews', fetchedNews);
 
   return (
     <div>
