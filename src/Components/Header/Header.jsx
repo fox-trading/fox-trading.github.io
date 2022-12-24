@@ -62,10 +62,10 @@ const Header = () => {
               {t("nav_shirt")}
             </div>
           </div>
-          <div className="drawer_nav_content__t">
+          {/* <div className="drawer_nav_content__t">
             <div className="header_t">RU</div>
             <div className="header_t">ENG</div>
-          </div>
+          </div> */}
         </Drawer>
 
         <div className="nav_content">
@@ -82,9 +82,9 @@ const Header = () => {
           <div className="nav_content__text disabled">{t("nav_calc")}</div>
           <div className="nav_content__text disabled">{t("nav_shirt")}</div>
         </div>
-        <div className="nav_content__t">
+        {/* <div className="nav_content__t">
           <SelectSmall onClick={() => changeLanguage("ru")} />
-        </div>
+        </div> */}
       </div>
     </div>
   );
