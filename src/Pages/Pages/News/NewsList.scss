@@ -1,0 +1,14 @@
+@import "../../../Style/Colors.scss";
+@import "../../../Style/Variables.scss";
+
+
+.news_content_list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.news-list {
+  padding-top: 176px;
+  background-color: $background;
+  padding-bottom: 80px;
+}

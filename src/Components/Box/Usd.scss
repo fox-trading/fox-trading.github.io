@@ -1,0 +1,35 @@
+@import "../../Style/Colors.scss";
+@import "../../Style/Variables.scss";
+.usd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 56px;
+  padding: 8px;
+  background: $background-header;
+  backdrop-filter: blur(15px);
+  border-radius: 8px;
+}
+
+.usd_text {
+  @extend %text-style-20px;
+  color: white;
+}
+
+.usd_img {
+  margin-right: 8px;
+}
+
+.usd_numbers {
+  @extend %text-style-12px;
+  color: white;
+}
+
+.usd_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: $color-content;
+}

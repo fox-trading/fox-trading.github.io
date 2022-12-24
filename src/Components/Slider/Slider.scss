@@ -1,0 +1,75 @@
+@import "../../Style/Variables.scss";
+@import "../../Style/Colors.scss";
+
+.slider {
+  padding: 0px 60px;
+  background: $background;
+}
+
+.slider_coin {
+  display: flex;
+}
+
+.slider_title {
+  @extend %text-style-36px;
+  color: $color-content;
+  margin-bottom: 24px;
+}
+
+.slider_text {
+  @extend %text-style-20px;
+  color: $color-text;
+  margin-top: 24px;
+  width: 523px;
+  text-transform: none;
+}
+
+.text_discription {
+  @extend %text-style-20px;
+  color: $color-content;
+}
+
+.slider_content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider_list {
+  display: flex;
+  flex-direction: column;
+}
+
+.slick-dots li button:before {
+  color: $color-sub-title !important;
+}
+
+.slick-next {
+  width: 64px;
+  height: 64px;
+  z-index: 11;
+  opacity: 0.3;
+}
+
+.slick-prev {
+  width: 64px;
+  height: 64px;
+  z-index: 11;
+  opacity: 0.3;
+}
+
+.slick-next:hover {
+  opacity: 1;
+}
+
+.slick-prev:hover {
+  opacity: 1;
+}
+
+.slider_img {
+  max-width: 100%;
+  height: auto;
+}

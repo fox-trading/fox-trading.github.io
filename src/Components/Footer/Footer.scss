@@ -1,0 +1,78 @@
+@import "../../Style/Variables.scss";
+@import "../../Style/Colors.scss";
+
+.footer {
+  background-color: $background-header;
+  backdrop-filter: blur(15px);
+}
+
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0px 32px 0px;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer_content_nav {
+  display: flex;
+}
+
+.footer_content_list {
+  display: flex;
+  margin-left: 81px;
+}
+.footer_content_list_ {
+  margin-right: 94px;
+}
+.footer_content_item {
+  @extend %text-style-18px;
+  margin-bottom: 12px;
+  color: $color-content;
+  text-decoration: none;
+}
+
+.footer_content_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_icons {
+  margin-left: 24px;
+}
+
+.footer_icons {
+  svg:hover {
+    fill: $fill-icon;
+    cursor: pointer;
+  }
+}
+
+.footer_content_item:hover {
+  color: $color-point;
+  cursor: pointer;
+}
+
+.footer_name_company {
+  @extend %text-style-18px;
+  font-family: "Roboto";
+  color: $color-point;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 54px;
+}
+
+.active_link_ {
+  @extend %text-style-18px;
+  margin-bottom: 12px;
+  color: $color-point !important;
+  text-decoration: none;
+  margin-bottom: 14px;
+}
+
+.footer_content_list_sub {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,42 @@
+@import "../../Style/Variables.scss";
+@import "../../Style/Colors.scss";
+
+.collapse_content {
+  margin-bottom: 24px;
+}
+.ant-collapse-header {
+  display: flex;
+  align-items: center;
+  background: $color-content;
+  border-radius: 4px 4px 0px 0px !important;
+}
+
+.ant-collapse-content-box {
+  background: $color-content;
+}
+
+.ant-collapse-expand-icon {
+  margin-top: 9px;
+}
+
+.collapse_name {
+  @extend %text-style-24px;
+  color: $color_title;
+  font-weight: 500;
+}
+.collapse_title {
+  @extend %text-style-36px;
+  color: $color-content;
+  margin-bottom: 48px;
+}
+
+.collapse_text {
+  @extend %text-style-18px;
+  color: $color_title;
+  font-family: "Roboto";
+}
+
+.ant-collapse-content-box {
+  padding: 0px !important;
+  display: flex;
+}

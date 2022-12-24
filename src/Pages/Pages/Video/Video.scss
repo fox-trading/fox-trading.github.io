@@ -1,0 +1,16 @@
+@import "../../../Style/Colors.scss";
+@import "../../../Style/Variables.scss";
+
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 97px 40px;
+  flex-direction: column;
+  background-color: $background;
+}
+
+.video_img {
+  max-width: 100%;
+  height: auto;
+}

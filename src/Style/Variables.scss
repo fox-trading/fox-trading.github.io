@@ -1,0 +1,108 @@
+%text-style-12px {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+}
+
+%text-style-14px {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+%text-style-14px-roboto {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+%text-style-16px {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+%text-style-18px {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.01em;
+}
+%text-style-18px-roboto {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+%text-style-20px {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+%text-style-24px {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+}
+
+%text-style-36px {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+}
+
+%text-style-64px {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+}
+
+%text-style-80px {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 80px;
+  letter-spacing: 0.01em;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../Fonts/Oswald/Oswald-VariableFont_wght.ttf") format("woff2"),
+    url("../Fonts/Oswald/Oswald-VariableFont_wght.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../Fonts/Roboto/Roboto-Light.ttf") format("woff2"),
+    url("../Fonts/Roboto/Roboto-Black.ttf") format("woff");
+}

@@ -1,0 +1,75 @@
+@import "../../../Style/Colors.scss";
+@import "../../../Style/Variables.scss";
+
+.course_open_vector {
+  @extend %text-style-36px;
+  color: $color-content;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.course_open_footer {
+  padding-top: 80px;
+  background-color: $background;
+}
+
+.course {
+  background: $background;
+  padding-top: 196px;
+}
+
+.course_content {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.course_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.course_vector {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.course_main_content_text {
+  @extend %text-style-24px;
+  color: $color-sub-title;
+  text-align: left;
+  margin: 16px 0px 12px 0px;
+}
+
+.course_vector_text {
+  text-align: left;
+
+  @extend %text-style-36px;
+  color: $color-content;
+  margin-right: 10px;
+}
+
+.course_vector_text:hover {
+  color: $color-point;
+  cursor: pointer;
+}
+
+.course_main_content_text {
+  @extend %text-style-24px;
+  color: $color-content;
+  text-align: left;
+  margin: 16px 0px 12px 0px;
+}
+
+.course_main_content_sub {
+  @extend %text-style-18px-roboto;
+  color: $color-text;
+  width: 545px;
+  height: 81px;
+  margin-bottom: 34px;
+}
+
+

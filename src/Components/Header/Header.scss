@@ -1,0 +1,92 @@
+@import "../../Style/Colors.scss";
+@import "../../Style/Variables.scss";
+
+.nav {
+  position: fixed;
+  padding: 25px 0px;
+  width: 100%;
+  background-color: $background-header;
+  backdrop-filter: blur(15px);
+  z-index: 12;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav_content {
+  display: flex;
+}
+
+.nav_content__text {
+  @extend %text-style-20px;
+  margin-right: 32px;
+  color: $color-content;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.css-1869usk-MuiFormControl-root {
+  margin: 0px !important;
+}
+
+.nav_content__t {
+  @extend %text-style-20px;
+  color: $color-point;
+}
+
+.nav_content__text:hover {
+  color: $color-point;
+  cursor: pointer;
+}
+
+.header_menu {
+  display: none;
+}
+
+.ant-drawer-header-title {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0;
+}
+
+.disabled {
+  color: $color-disabled !important;
+  opacity: 0.2;
+}
+
+.disabled:hover {
+  cursor: default !important;
+}
+
+.header_t {
+  @extend %text-style-20px;
+  color: $color-title;
+}
+
+.nav_content__text_drawer {
+  color: $color-title !important;
+}
+
+.ant-drawer-close {
+  margin: 0 !important;
+}
+
+.nav_content__text_drawer:hover {
+  color: $color-point;
+}
+
+.active_link {
+  color: $color-point !important;
+  text-decoration: none;
+  @extend %text-style-20px;
+  margin-right: 32px;
+  color: $color-content;
+  text-transform: uppercase;
+  text-decoration: none;
+}
