@@ -15,7 +15,7 @@ import "./App.scss";
 
 function App() {
   return (
-    <main className="App">
+    <main className="app">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
