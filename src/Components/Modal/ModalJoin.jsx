@@ -15,12 +15,12 @@ const ModalJoin = () => {
           <Input title="Имя" placeholder="Иван" />
         </div>
         <div>
-          <Input title="Телефон" type="number" placeholder="+996" />
+          <Input title="Телефон" type="text" placeholder="+996" />
         </div>
       </div>
       <div className="modal_registr">
         <div>
-          <Input title="Telegram" type="number" placeholder="@ivan" />
+          <Input title="Telegram" type="text" placeholder="@ivan" />
         </div>
         <div>
           <Input title="Email" type="email" placeholder="ivan@gmail.com" />
