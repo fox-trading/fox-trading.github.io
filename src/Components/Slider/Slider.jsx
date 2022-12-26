@@ -11,6 +11,35 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Slider.scss";
 
+const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+  <Right
+    {...props}
+    className={
+      "slick-prev slick-arrow" + (currentSlide === 0 ? " slick-disabled" : "")
+    }
+    aria-hidden="true"
+    aria-disabled={currentSlide === 0 ? true : false}
+    type="button"
+  >
+    Previous
+  </Right>
+);
+
+const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
+  <Left
+    {...props}
+    className={
+      "slick-next slick-arrow" +
+      (currentSlide === slideCount - 1 ? " slick-disabled" : "")
+    }
+    aria-hidden="true"
+    aria-disabled={currentSlide === slideCount - 1 ? true : false}
+    type="button"
+  >
+    Next
+  </Left>
+);
+
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
@@ -21,8 +50,8 @@ export default class SimpleSlider extends Component {
       autoplay: true,
       autoplaySpeed: 3000,
       speed: 500,
-      nextArrow: <Left />,
-      prevArrow: <Right />,
+      nextArrow: <SlickArrowLeft />,
+      prevArrow: <SlickArrowRight />,
     };
 
     const list = [
@@ -57,7 +86,7 @@ export default class SimpleSlider extends Component {
             <div key={i}>
               <div className="slider_content">
                 <div className="slider_coin">
-                  <img src={item.img} alt="" className="slider_img"/>
+                  <img src={item.img} alt="" className="slider_img" />
                 </div>
                 <div className="slider_list">
                   <div className="slider_title">{item.title}</div>
