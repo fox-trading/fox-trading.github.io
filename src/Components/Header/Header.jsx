@@ -68,9 +68,7 @@ const Header = () => {
           <NavLink to="/news" className={setActive}>
             Новости
           </NavLink>
-          <div className="nav_content__text disabled">
-            Статистика
-          </div>
+          <div className="nav_content__text disabled">Статистика</div>
           <div className="nav_content__text disabled">О нас</div>
           <div className="nav_content__text disabled">Калькулятор</div>
           <div className="nav_content__text disabled">Мерч</div>
