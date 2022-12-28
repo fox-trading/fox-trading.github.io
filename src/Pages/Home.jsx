@@ -24,7 +24,7 @@ const Home = () => {
           <Main />
           <SimpleSlider />
           <div>
-            <CourseList course={COURSES_LIST} />
+            <CourseList course={COURSES_LIST} link="courses" />
           </div>
           <Stats />
           <Outlet />
