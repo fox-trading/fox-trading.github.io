@@ -1,17 +1,22 @@
 import CourseContainer from "./CourseContainer";
 import Header from "../../../Components/Header/Header";
-
+import { Link } from "react-router-dom";
+import { ReactComponent as Vector } from "../../../Imgs/Vector.svg";
 import "./CourseList.scss";
 
-const CourseList = ({ course, footer, header }) => {
-
+const CourseList = ({ course, footer, header, link }) => {
   return (
     <>
       {header}
       <div className="course">
         <div className="course_content">
           <div className="course_open_vector">
-            <div className="course_vector_text">Курсы</div>
+            <Link to={link} className="underline">
+              <div className="course_vector_text">Курсы</div>
+            </Link>
+            <div>
+              <Vector />
+            </div>
           </div>
           <div className="course_list">
             {course.map((item, i) => (

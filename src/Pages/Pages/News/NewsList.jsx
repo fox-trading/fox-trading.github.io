@@ -1,6 +1,6 @@
 import NewsBox from "./NewsBox";
 import { Link } from "react-router-dom";
-import vector from "../../../Imgs/Vector.svg";
+import { ReactComponent as Vector } from "../../../Imgs/Vector.svg";
 import { useNewsHook } from "../../../Hooks/useNewsHook";
 
 import "./NewsList.scss";
@@ -17,11 +17,10 @@ const NewsList = ({ news, header, footer, button }) => {
         <div className="news">
           <div className="news_main">
             <div className="news_name">
-              <Link to="news" className="underline">
-                <div className="news_name__text">Новости</div>
-              </Link>
+              <div className="news_name__text">Новости</div>
+
               <div>
-                <img src={vector} alt="" />
+              <Vector />
               </div>
             </div>
             <div className="news_content_list">
