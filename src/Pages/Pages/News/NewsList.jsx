@@ -20,7 +20,7 @@ const NewsList = ({ news, header, footer, button }) => {
               <div className="news_name__text">Новости</div>
 
               <div>
-              <Vector />
+                <Vector />
               </div>
             </div>
             <div className="news_content_list">
