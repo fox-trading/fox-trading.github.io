@@ -1,11 +1,7 @@
 import CourseContainer from "./CourseContainer";
-<<<<<<< Updated upstream:src/Pages/Pages/Course/CourseList.jsx
-import Header from "../../../Components/Header/Header";
 import { Link } from "react-router-dom";
 import { ReactComponent as Vector } from "../../../Imgs/Vector.svg";
-=======
 
->>>>>>> Stashed changes:src/Pages/Course/CourseList.jsx
 import "./CourseList.scss";
 
 const CourseList = ({ course, footer, header, link }) => {

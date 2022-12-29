@@ -1,12 +1,6 @@
 import NewsBox from "./NewsBox";
-import { Link } from "react-router-dom";
-<<<<<<< Updated upstream:src/Pages/Pages/News/NewsList.jsx
 import { ReactComponent as Vector } from "../../../Imgs/Vector.svg";
-import { useNewsHook } from "../../../Hooks/useNewsHook";
-=======
-import vector from "../../Imgs/Vector.svg";
 import fox_avatar_mono from "../../Imgs/fox_avatar_mono.png";
->>>>>>> Stashed changes:src/Pages/News/NewsList.jsx
 
 import "./NewsList.scss";
 
