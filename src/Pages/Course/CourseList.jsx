@@ -1,7 +1,7 @@
 import CourseContainer from "./CourseContainer";
-import Header from "../../../Components/Header/Header";
 import { Link } from "react-router-dom";
-import { ReactComponent as Vector } from "../../../Imgs/Vector.svg";
+import { ReactComponent as Vector } from "../../Imgs/Vector.svg";
+
 import "./CourseList.scss";
 
 const CourseList = ({ course, footer, header, link }) => {

@@ -1,8 +1,8 @@
 {
-  "name": "testsass",
+  "name": "fox-trading",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://fox-trading.github.io/frontend",
+  "homepage": "https://fox-trading.github.io",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -13,9 +13,6 @@
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.0.0",
     "axios": "^1.2.1",
-    "i18next": "^22.0.6",
-    "i18next-browser-languagedetector": "^7.0.1",
-    "i18next-http-backend": "^2.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^12.0.0",

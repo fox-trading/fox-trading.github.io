@@ -1,35 +1,31 @@
 import NewsBox from "./NewsBox";
 import { Link } from "react-router-dom";
-import { ReactComponent as Vector } from "../../../Imgs/Vector.svg";
-import { useNewsHook } from "../../../Hooks/useNewsHook";
+import vector from "../../Imgs/Vector.svg";
 
-import "./NewsList.scss";
-
-const NewsList = ({ news, header, footer, button }) => {
-  // const {news: fetchedNews} = useNewsHook();
-  // console.log('fetchedNews', fetchedNews);
-
+import "./NewsMain.scss";
+const NewsMain = ({ news, header, footer, button }) => {
   return (
     <div>
       {header}
 
-      <div className="news-list">
+      <div className="news-main">
         <div className="news">
           <div className="news_main">
             <div className="news_name">
-              <div className="news_name__text">Новости</div>
-
+              <Link to="news" className="underline">
+                <div className="news_name__text">Новости</div>
+              </Link>
               <div>
-                <Vector />
+                <img src={vector} alt="" />
               </div>
             </div>
-            <div className="news_content_list">
+            <div className="news_content">
               {news.map((item, i) => (
                 <NewsBox
                   key={i}
                   text={item.title}
                   source={item.source}
-                  time={item.updatedAt}
+                  time={item.time}
                   img={item.img}
                 />
               ))}
@@ -43,4 +39,4 @@ const NewsList = ({ news, header, footer, button }) => {
   );
 };
 
-export default NewsList;
+export default NewsMain;

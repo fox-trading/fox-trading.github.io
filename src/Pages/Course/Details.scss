@@ -1,5 +1,5 @@
-@import "../../../Style/Colors.scss";
-@import "../../../Style/Variables.scss";
+@import "src/Style/Colors";
+@import "src/Style/Variables";
 
 .current_course {
   background-color: $background;
@@ -33,6 +33,7 @@
 
 .current_course_button {
   display: flex;
+  
 }
 
 .current_course_about {
