@@ -1,5 +1,5 @@
 import NewsBox from "./NewsBox";
-import { ReactComponent as Vector } from "../../../Imgs/Vector.svg";
+import { ReactComponent as Vector } from "../../Imgs/Vector.svg";
 import fox_avatar_mono from "../../Imgs/fox_avatar_mono.png";
 
 import "./NewsList.scss";
