@@ -1,6 +1,6 @@
 import NewsBox from "./NewsBox";
 import { Link } from "react-router-dom";
-import vector from "../../../Imgs/Vector.svg";
+import vector from "../../Imgs/Vector.svg";
 
 import "./NewsMain.scss";
 const NewsMain = ({ news, header, footer, button }) => {

@@ -1,5 +1,5 @@
-@import "../../../Style/Colors.scss";
-@import "../../../Style/Variables.scss";
+@import "src/Style/Colors";
+@import "src/Style/Variables";
 
 .current_news {
   padding-top: 196px;
@@ -14,6 +14,8 @@
 }
 
 .current_news_content {
+  max-width: 1120px;
+  margin: 0 auto;
   width: 100%;
 }
 

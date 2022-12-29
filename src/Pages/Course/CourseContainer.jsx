@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Button from "../../../Components/Button/Button";
+import Button from "../../Components/Button/Button";
 
 import "./CourseContainer.scss";
 const CourseContainer = ({ picture: Image, title, text }) => {

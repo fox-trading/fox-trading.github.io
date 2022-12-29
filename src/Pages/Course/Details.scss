@@ -1,0 +1,116 @@
+@import "src/Style/Colors";
+@import "src/Style/Variables";
+
+.current_course {
+  background-color: $background;
+}
+
+.current_course_ {
+  padding-top: 234px;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.current_course_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.current_course_title {
+  @extend %text-style-64px;
+  color: $color-content;
+  margin-bottom: 16px;
+}
+
+.current_course_item {
+  @extend %text-style-24px;
+  color: $color-text;
+  padding-bottom: 48px;
+  width: 535px;
+}
+
+.current_course_button {
+  display: flex;
+  
+}
+
+.current_course_about {
+  padding: 100px 0px;
+}
+
+.current_course_about_title {
+  @extend %text-style-36px;
+  color: $color-content;
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.current_course_about_content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.current_course_about_name {
+  @extend %text-style-24px;
+  color: $color-content;
+  width: 354px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  height: 68px;
+}
+
+.current_course_about_text {
+  @extend %text-style-16px;
+  font-family: "Roboto";
+  width: 354px;
+  color: #f1e7de;
+  color: $color-content;
+}
+
+.current_course_study_title {
+  @extend %text-style-36px;
+  color: $color-content;
+
+  margin-top: 60px;
+  margin-bottom: 48px;
+}
+
+.current_course_study_content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.current_course_study_list {
+  margin-bottom: 72px;
+}
+
+.current_course_study_text {
+  @extend %text-style-20px;
+  color: $color-content;
+  text-transform: none;
+  width: 354px;
+  height: 72px;
+  margin-bottom: 72px;
+}
+
+.collapse {
+  margin-bottom: 80px;
+}
+
+.css-dev-only-do-not-override-1e67qka .ant-btn-primary:not(:disabled):hover {
+  background: $color-sub-title;
+}
+
+.current_course_main_img_ {
+  max-width: 100%;
+  height: auto;
+}
+
+.current_course_about_img_ {
+  max-width: 100%;
+  height: auto;
+}

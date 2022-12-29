@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Button, Modal } from "antd";
 
-import { ReactComponent as Down } from "../../../Imgs/down.svg";
+import { ReactComponent as Down } from "../../Imgs/down.svg";
 
-import ModalDone from "../../../Components/Modal/ModalDone";
-import ModalJoin from "../../../Components/Modal/ModalJoin";
-import Header from "../../../Components/Header/Header";
-import Footer from "../../../Components/Footer/Footer";
-import ButtonCustom from "../../../Components/Button/Button";
-import PointCard from "../../../Imgs/PointCard.png";
-import CollapseCourse from "../../../Components/Collapse/Collapse";
-import PaperCard from "../../../Imgs/PaperCard.png";
-import ChatCard from "../../../Imgs/ChatCard.png";
-import { COURSES_DETAILS } from "../../../Helpers/course";
+import ModalDone from "../../Components/Modal/ModalDone";
+import ModalJoin from "../../Components/Modal/ModalJoin";
+import Header from "../../Components/Header/Header";
+import Footer from "../../Components/Footer/Footer";
+import ButtonCustom from "../../Components/Button/Button";
+import PointCard from "../../Imgs/PointCard.png";
+import CollapseCourse from "../../Components/Collapse/Collapse";
+import PaperCard from "../../Imgs/PaperCard.png";
+import ChatCard from "../../Imgs/ChatCard.png";
+import { COURSES_DETAILS } from "../../Helpers/course";
 
 import "./Details.scss";
 
