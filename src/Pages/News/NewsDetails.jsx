@@ -34,7 +34,6 @@ const NewsDetails = ({news}) => {
                     <div className="current_news_carusel_text">
                       <div dangerouslySetInnerHTML={{__html: item.content}}/>
                     </div>
-
                   </div>
                 </div>
               ))}
