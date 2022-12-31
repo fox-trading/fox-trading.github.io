@@ -4,7 +4,7 @@ import fox_avatar_mono from "../../Imgs/fox_avatar_mono.png";
 
 import "./NewsList.scss";
 
-const NewsList = ({ news button }) => {
+const NewsList = ({ news, button }) => {
   return (
     <div>
       <div className="news-list">
