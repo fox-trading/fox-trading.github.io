@@ -4,10 +4,9 @@ import { ReactComponent as Vector } from "../../Imgs/Vector.svg";
 
 import "./CourseList.scss";
 
-const CourseList = ({ course, footer, header, link }) => {
+const CourseList = ({ course, link }) => {
   return (
     <>
-      {header}
       <div className="course">
         <div className="course_content">
           <div className="course_open_vector">
@@ -30,7 +29,6 @@ const CourseList = ({ course, footer, header, link }) => {
           </div>
         </div>
       </div>
-      <div className="course_open_footer">{footer}</div>
     </>
   );
 };

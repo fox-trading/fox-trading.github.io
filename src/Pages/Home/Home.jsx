@@ -1,12 +1,10 @@
 import { Outlet } from "react-router-dom";
-import Header from "../../Components/Header/Header";
 import Main from "./Main/Main";
 import CourseList from "../Course/CourseList";
 import NewsMain from "../News/NewsMain";
 import Stats from "./Stats/Stats";
 import Merch from "./Merch/Merch";
 import Video from "./Video/Video";
-import Footer from "../../Components/Footer/Footer";
 import SimpleSlider from "../../Components/Slider/Slider";
 import { COURSES_LIST } from "../../Helpers/course";
 import { NEWS_LIST } from "../../Helpers/news";
@@ -18,9 +16,6 @@ const Home = () => {
     <div className="home">
       <div className="home_content">
         <div>
-          <Header />
-        </div>
-        <div>
           <Main />
           <SimpleSlider />
           <div>
@@ -28,12 +23,11 @@ const Home = () => {
           </div>
           <Stats />
           <Outlet />
-          <NewsMain news={NEWS_LIST} />
+          <div className="news-main_wrapper">
+            <NewsMain news={NEWS_LIST} />
+          </div>
           <Merch />
           <Video />
-        </div>
-        <div>
-          <Footer />
         </div>
       </div>
     </div>

@@ -4,19 +4,16 @@ import fox_avatar_mono from "../../Imgs/fox_avatar_mono.png";
 
 import "./NewsList.scss";
 
-const NewsList = ({ news, header, footer, button }) => {
+const NewsList = ({ news button }) => {
   return (
     <div>
-      {header}
       <div className="news-list">
         <div className="news">
           <div className="news_main">
             <div className="news_name">
               <div className="news_name__text">Новости</div>
 
-              <div>
-              <Vector />
-              </div>
+              <div><Vector /></div>
             </div>
             <div className="news_content_list">
               {news.map((item, i) => (
@@ -33,7 +30,6 @@ const NewsList = ({ news, header, footer, button }) => {
           </div>
         </div>
       </div>
-      {footer}
     </div>
   );
 };

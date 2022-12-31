@@ -18,6 +18,7 @@ function App() {
 
   return (
     <main className="app">
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
@@ -25,8 +26,6 @@ function App() {
           element={
             <NewsList
               news={news}
-              header={<Header />}
-              footer={<Footer />}
               button={<Button text=" Показать еще новости" />}
             />
           }
@@ -35,15 +34,12 @@ function App() {
         <Route
           path="/courses"
           element={
-            <CourseList
-              course={COURSES_INFO}
-              header={<Header />}
-              footer={<Footer />}
-            />
+            <CourseList course={COURSES_INFO}/>
           }
         />
         <Route path="/course/:name" element={<CourseDetails />} />
       </Routes>
+      <Footer />
     </main>
   );
 }

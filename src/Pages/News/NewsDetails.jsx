@@ -1,7 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-import Header from "../../Components/Header/Header";
-import Footer from "../../Components/Footer/Footer";
 import { ReactComponent as Right } from "../../Imgs/Left.svg";
 import { ReactComponent as Left } from "../../Imgs/Right.svg";
 
@@ -23,7 +21,6 @@ const NewsDetails = ({news}) => {
 
   return (
     <div>
-      <Header />
       <div className="current_news">
           <div className="current_news_content">
             <Slider {...settings}>
@@ -39,7 +36,6 @@ const NewsDetails = ({news}) => {
               ))}
             </Slider>
         </div>
-        <Footer />
       </div>
     </div>
   );

@@ -6,8 +6,6 @@ import { ReactComponent as Down } from "../../Imgs/down.svg";
 
 import ModalDone from "../../Components/Modal/ModalDone";
 import ModalJoin from "../../Components/Modal/ModalJoin";
-import Header from "../../Components/Header/Header";
-import Footer from "../../Components/Footer/Footer";
 import ButtonCustom from "../../Components/Button/Button";
 import PointCard from "../../Imgs/PointCard.png";
 import CollapseCourse from "../../Components/Collapse/Collapse";
@@ -63,7 +61,6 @@ const Details = () => {
   ];
   return (
     <div className="current_course">
-      <Header />
       <div className="current_course_">
         <div className="current_course_main">
           <div className="current_course_list">
@@ -178,7 +175,6 @@ const Details = () => {
           <CollapseCourse />
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

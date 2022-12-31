@@ -3,11 +3,9 @@ import { Link } from "react-router-dom";
 import vector from "../../Imgs/Vector.svg";
 
 import "./NewsMain.scss";
-const NewsMain = ({ news, header, footer, button }) => {
+const NewsMain = ({ news, button }) => {
   return (
     <div>
-      {header}
-
       <div className="news-main">
         <div className="news">
           <div className="news_main">
@@ -34,7 +32,6 @@ const NewsMain = ({ news, header, footer, button }) => {
           </div>
         </div>
       </div>
-      {footer}
     </div>
   );
 };
