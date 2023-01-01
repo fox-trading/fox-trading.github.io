@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Main from "./Main/Main";
 import CourseList from "../Course/CourseList";
-import NewsMain from "../News/NewsMain";
+import NewsList from "../News/NewsList";
 import Stats from "./Stats/Stats";
 import Merch from "./Merch/Merch";
 import Video from "./Video/Video";
@@ -24,8 +24,9 @@ const Home = () => {
           <Stats />
           <Outlet />
           <div className="news-main_wrapper">
-            <NewsMain news={NEWS_LIST} />
+            <NewsList news={NEWS_LIST} news_route="news"/>
           </div>
+
           <Merch />
           <Video />
         </div>

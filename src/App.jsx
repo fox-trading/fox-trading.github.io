@@ -27,6 +27,7 @@ function App() {
             <NewsList
               news={news}
               button={<Button text=" Показать еще новости" />}
+              news_height="news_height"
             />
           }
         />

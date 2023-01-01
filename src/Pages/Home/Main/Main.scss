@@ -123,16 +123,20 @@
   margin-top: 23px;
   animation: rotate 0.7s infinite ease-in-out alternate;
   height: 100px;
+  position: relative;
 }
 
 .down {
+  position: absolute;
 }
 
 @keyframes rotate {
   from {
+    top: 10px;
     line-height: 50px;
   }
   to {
+    top: 20px;
     line-height: 100px;
   }
 }
