@@ -40,22 +40,31 @@ const Footer = () => {
         </div>
         <div>
           <div className="footer_content_icon">
-            <div className="footer_icons">
+            {/* <div className="footer_icons">
               
               <Facebook />
               
-            </div>
-            <div className="footer_icons">
+            </div> */}
+            {/* <div className="footer_icons">
               <Twitter />
+            </div> */}
+            <div className="footer_icons">
+              <a href="https://www.instagram.com/0therfox/" target="_blank">
+                <Instagram />
+              </a>
             </div>
             <div className="footer_icons">
-              <Instagram />
+              <a
+                href="https://www.youtube.com/channel/UCYqXkPAmCoFvzg6X6knRucw"
+                target="_blank"
+              >
+                <YouTube />
+              </a>
             </div>
             <div className="footer_icons">
-              <YouTube />
-            </div>
-            <div className="footer_icons">
-              <Telegram />
+              <a href="https://t.me/foxautome" target="_blank">
+                <Telegram />
+              </a>
             </div>
           </div>
 
