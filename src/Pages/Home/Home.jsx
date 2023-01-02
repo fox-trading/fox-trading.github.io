@@ -24,7 +24,11 @@ const Home = () => {
           <Stats />
           <Outlet />
           <div className="news-main_wrapper">
-            <NewsList news={NEWS_LIST} news_route="news"/>
+            <NewsList
+              news={NEWS_LIST}
+              news_route="news"
+              news_overflow="news_content"
+            />
           </div>
 
           <Merch />

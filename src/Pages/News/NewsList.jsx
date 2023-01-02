@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import "./NewsList.scss";
 
-const NewsList = ({ news, button, news_route, news_height }) => {
+const NewsList = ({ news, button, news_route, news_height ,news_overflow}) => {
   return (
     <div>
       <div className="news-list">
@@ -22,6 +22,7 @@ const NewsList = ({ news, button, news_route, news_height }) => {
                 </div>
               </div>
               <div className="news_content_list">
+                <div className={news_overflow} > 
                 {news.map((item, i) => (
                   <NewsBox
                     key={i}
@@ -31,6 +32,7 @@ const NewsList = ({ news, button, news_route, news_height }) => {
                     img={item.img || fox_avatar_mono}
                   />
                 ))}
+                </div>
               </div>
               <div className="news_open_button">{button}</div>
             </div>
