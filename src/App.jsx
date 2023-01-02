@@ -39,8 +39,10 @@ function App() {
             <CourseList course={COURSES_INFO}/>
           }
         />
+      
         <Route path="/course/:name" element={<CourseDetails />} />
       </Routes>
+      
       <Footer />
     </main>
   );

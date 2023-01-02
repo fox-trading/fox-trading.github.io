@@ -6,7 +6,14 @@ import { Link } from "react-router-dom";
 import "./NewsList.scss";
 
 const NewsList = ({ news, button, news_route, news_height ,news_overflow}) => {
+
+  const now = new Date()
+
+  const RUDate = new Intl.DateTimeFormat('ru')
+  console.log(RUDate.format(now));
   return (
+
+
     <div>
       <div className="news-list">
       <div className={news_height}>
@@ -28,7 +35,7 @@ const NewsList = ({ news, button, news_route, news_height ,news_overflow}) => {
                     key={i}
                     text={item.title}
                     source={item.source}
-                    time={item.updated_at}
+                    time={item.updated_at }
                     img={item.img || fox_avatar_mono}
                   />
                 ))}

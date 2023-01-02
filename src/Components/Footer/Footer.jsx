@@ -41,7 +41,9 @@ const Footer = () => {
         <div>
           <div className="footer_content_icon">
             <div className="footer_icons">
+              
               <Facebook />
+              
             </div>
             <div className="footer_icons">
               <Twitter />
