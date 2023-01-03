@@ -52,6 +52,7 @@
   height: 64px;
   z-index: 11;
   opacity: 0.3;
+  right: -65px;
 }
 
 .slick-prev {
@@ -59,6 +60,7 @@
   height: 64px;
   z-index: 11;
   opacity: 0.3;
+  left: -65px;
 }
 
 .slick-next:hover {

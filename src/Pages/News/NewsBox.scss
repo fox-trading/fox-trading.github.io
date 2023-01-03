@@ -2,7 +2,7 @@
 @import "src/Style/Variables";
 
 .news_box {
-  width: 30%;
+  width: 200px;
   margin-bottom: 64px;
   margin-right: 32px;
 }
@@ -23,6 +23,7 @@
 .news_box__img {
   margin-right: 8px;
 }
+
 
 .news_box__text:hover {
   color: $color-point;

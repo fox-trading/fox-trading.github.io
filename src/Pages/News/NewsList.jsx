@@ -5,15 +5,9 @@ import { Link } from "react-router-dom";
 
 import "./NewsList.scss";
 
-const NewsList = ({ news, button, news_route, news_height ,news_overflow}) => {
+const NewsList = ({ news, button, news_route, news_height ,news_overflow}) => {  
 
-  const now = new Date()
-
-  const RUDate = new Intl.DateTimeFormat('ru')
-  console.log(RUDate.format(now));
   return (
-
-
     <div>
       <div className="news-list">
       <div className={news_height}>
