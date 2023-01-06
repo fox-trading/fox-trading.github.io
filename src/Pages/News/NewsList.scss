@@ -47,6 +47,12 @@
   flex-wrap: wrap;
 }
 
+.news_content_no {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
 .news_name__text {
   @extend %text-style-36px;
   color: $color-content;

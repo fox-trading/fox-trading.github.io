@@ -28,6 +28,7 @@ function App() {
               news={news}
               button={<Button text=" Показать еще новости" />}
               news_height="news_height"
+              news_overflow="news_content_no"
               
             />
           }
