@@ -32,7 +32,7 @@ const Header = () => {
           <Menu onClick={showDrawer} />
         </div>
 
-        <Drawer placement="right" onClose={onClose} open={open} width="220px">
+        <Drawer placement="right" onClose={onClose} open={open} width="220px" >
           <div className="drawer_nav_content">
             <div className="drawer_nav_content_sub">
               <NavLink to="/courses" className={setActive}>
@@ -54,6 +54,7 @@ const Header = () => {
             <div className="nav_content__text nav_content__text_drawer disabled">
               Мерч
             </div>
+            
           </div>
           {/* <div className="drawer_nav_content__t">
             <div className="header_t">RU</div>

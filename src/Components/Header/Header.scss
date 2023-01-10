@@ -82,7 +82,7 @@
 }
 
 .active_link {
-  color: $color-point !important;
+  color: $color-point !important; 
   text-decoration: none;
   @extend %text-style-20px;
   margin-right: 32px;
