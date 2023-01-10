@@ -22,7 +22,7 @@ const NewsList = ({ news, button, news_route, news_height ,news_overflow}) => {
                   <Vector />
                 </div>
               </div>
-              <div className="news_content_list">
+             
                 <div className={news_overflow} > 
                 {news.map((item, i) => (
                   <NewsBox
@@ -33,7 +33,7 @@ const NewsList = ({ news, button, news_route, news_height ,news_overflow}) => {
                     img={item.img || fox_avatar_mono}
                   />
                 ))}
-                </div>
+               
               </div>
               <div className="news_open_button">{button}</div>
             </div>
