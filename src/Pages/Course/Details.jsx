@@ -7,18 +7,14 @@ import { ReactComponent as Down } from "../../Imgs/down.svg";
 import ModalDone from "../../Components/Modal/ModalDone";
 import ModalJoin from "../../Components/Modal/ModalJoin";
 import ButtonCustom from "../../Components/Button/Button";
-import PointCard from "../../Imgs/PointCard.png";
 import CollapseCourse from "../../Components/Collapse/Collapse";
-import PaperCard from "../../Imgs/PaperCard.png";
-import ChatCard from "../../Imgs/ChatCard.png";
-import { COURSES_DETAILS } from "../../Helpers/course";
+import { COURSES_LIST } from "../../Helpers/course";
 
 import "./Details.scss";
 
 const Details = () => {
   const { name } = useParams();
-  const course = COURSES_DETAILS.find((it) => it.name === name);
-
+  const course = COURSES_LIST.find(it => it.id === name);
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
   const [openSecond, setOpenSecond] = useState(false);
@@ -40,31 +36,13 @@ const Details = () => {
     setOpenSecond(false);
   };
 
-  const list_about = [
-    {
-      title: "Более 20 часов обучающих материалов",
-      text: "Курс представлен в записи. Вам будет предоставлен доступ в личный кабинет для просмотра видео уроков.",
-      img: PointCard,
-    },
-
-    {
-      title: "Практические занятие после каждого урока.",
-      text: "По факту просмотра любого из уроков необходимо выполнить домашнее задание с постоянной поддержкой кураторов команды FoxTraders. Обратная связь от кураторов поможет разобраться во всех темах дополнительно и при необходимости более углубленно.",
-      img: PaperCard,
-    },
-
-    {
-      title: "Предоставляется доступ в чат потока.",
-      text: "В рамках чата вы будете постоянно на связи с другими учащимися и с кураторами проекта. Комьюнити поможет быстрее развиться в сфере трейдинга. В чате постоянно публикуются дополнительные материалы, связанные с образованием.",
-      img: ChatCard,
-    },
-  ];
   return (
     <div className="current_course">
       <div className="current_course_">
         <div className="current_course_main">
           <div className="current_course_list">
             <div className="current_course_title">{course.name}</div>
+
             <div className="current_course_item">{course.description}</div>
 
             <div className="current_course_item">{course.subDescription}</div>
@@ -124,8 +102,8 @@ const Details = () => {
             Из чего состоит наш курс
           </div>
           <div className="current_course_about_content">
-            {list_about.map((item, i) => (
-              <div>
+            {course.listAbout.map((item, i) => (
+              <div key={i}>
                 <div className="current_course_about_img">
                   <img
                     src={item.img}
@@ -143,36 +121,18 @@ const Details = () => {
         <div className="current_course_study">
           <div className="current_course_study_title">Чему вы научитесь</div>
           <div className="current_course_study_content">
-            <div className="current_course_study_list">
-              <div className="current_course_study_text">
-                Изучите платформы для торговли и аналитики рынка криптовалют
+            {course.learningList.map(item => (
+              <div className="current_course_study_list">
+                <div className="current_course_study_text">
+                  {item}
+                </div>
               </div>
-              <div className="current_course_study_text">
-                Научитесь контролировать риски в сделках
-              </div>
-            </div>
-            <div>
-              <div className="current_course_study_text">
-                Изучите логику выбора активов для торговли
-              </div>
-              <div className="current_course_study_text">
-                Научитесь подбирать оптимальное время для торговли на рынке
-              </div>
-            </div>
-            <div>
-              <div className="current_course_study_text">
-                Овладеете основами свинг и интрадей трейдинга, логикой открытия
-                и закрытия позиций
-              </div>
-              <div className="current_course_study_text">
-                Узнаете дополнительные способы заработка в сфере крипты
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
         <div className="collapse">
-          <CollapseCourse />
+          <CollapseCourse lessons={course.lessons} />
         </div>
       </div>
     </div>

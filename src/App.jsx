@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
-import { COURSES_INFO } from "./Helpers/course";
+import { COURSES_LIST } from "./Helpers/course";
 import Home from "./Pages/Home/Home";
 import CourseDetails from "./Pages/Course/Details";
 import CourseList from "./Pages/Course/CourseList";
@@ -34,13 +34,8 @@ function App() {
           }
         />
         <Route path="/news-details" element={<NewsDetails news={news}/>} />
-        <Route
-          path="/courses"
-          element={
-            <CourseList course={COURSES_INFO}/>
-          }
-        />
-      
+
+        <Route path="/courses" element={<CourseList courses={COURSES_LIST}/>} />
         <Route path="/course/:name" element={<CourseDetails />} />
       </Routes>
       
