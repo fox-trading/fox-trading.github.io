@@ -598,12 +598,13 @@
     max-width: 300px !important;
   }
 
-  .news_content {
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-    max-width: 450px;
-    height: 350px;
+  .news-main_wrapper {
+    .news_content {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      height: 350px;
+    }
   }
 
   .news_open_button {

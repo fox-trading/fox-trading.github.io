@@ -27,7 +27,6 @@ const Home = () => {
             <NewsList
               news={NEWS_LIST}
               news_route="news"
-              news_overflow="news_content"
             />
           </div>
 
