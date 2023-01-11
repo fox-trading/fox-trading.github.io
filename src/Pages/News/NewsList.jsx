@@ -6,13 +6,12 @@ import Button from "../../Components/Button/Button";
 
 import "./NewsList.scss";
 
-const NewsList = ({news, news_route}) => {
-  console.log('news', news)
+const NewsList = ({news, link}) => {
   return (
     <div className="news-list">
       <div className="news_main">
         <div className="news_name">
-          <Link to={news_route} className="underline">
+          <Link to={link} className="underline">
             <div className="news_name__text">Новости</div>
           </Link>
           <div>
