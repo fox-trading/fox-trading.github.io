@@ -2,7 +2,6 @@ import "./NewsBox.scss";
 import { Link } from "react-router-dom";
 
 const NewsBox = ({ text, time, source, img }) => {
-  console.log('time', time);
   const date = time ? new Date(time) : null;
   const dateTime = time ? new Intl.DateTimeFormat('ru', {dateStyle: "short", timeStyle: "short"}).format(date) : null;
 

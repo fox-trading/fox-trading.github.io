@@ -8,10 +8,12 @@ import ModalJoin from "../../../Components/Modal/ModalJoin";
 
 import { ReactComponent as Down } from "../../../Imgs/down.svg";
 import { ReactComponent as Logo } from "../../../Imgs/BigLogo.svg";
+import {useRatesHook} from "../../../Hooks/useRatesHook";
 
 import "./Main.scss";
 
 const Main = () => {
+  const { rates } = useRatesHook();
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
 
