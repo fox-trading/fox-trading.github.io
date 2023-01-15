@@ -86,7 +86,7 @@
 }
 
 .current_course_study_list {
-  flex: 33.33%;
+  flex: 30.33%;
   margin-bottom: 72px;
 }
 
@@ -94,6 +94,7 @@
   @extend %text-style-20px;
   color: $color-content;
   text-transform: none;
+  max-width: 22vw;
 }
 
 .collapse {
