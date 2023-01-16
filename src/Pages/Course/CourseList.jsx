@@ -4,7 +4,7 @@ import { ReactComponent as Vector } from "../../Imgs/Vector.svg";
 
 import "./CourseList.scss";
 
-const CourseList = ({ course, link }) => {
+const CourseList = ({ courses, link }) => {
   return (
     <>
       <div className="course">
@@ -18,13 +18,8 @@ const CourseList = ({ course, link }) => {
             </div>
           </div>
           <div className="course_list">
-            {course.map((item, i) => (
-              <CourseContainer
-                key={i}
-                picture={item.image}
-                text={item.description}
-                title={item.name}
-              />
+            {courses.map((item) => (
+              <CourseContainer key={item.id} course={item}/>
             ))}
           </div>
         </div>

@@ -589,21 +589,27 @@
     margin-top: 100px;
   }
   .current_course_study_content {
-    overflow: auto;
-    max-width: 450px;
-    height: 350px;
-  }
-
-  .current_course_study_text {
-    max-width: 300px !important;
-  }
-
-  .news_content {
     display: flex;
     flex-direction: column;
     overflow: auto;
     max-width: 450px;
     height: 350px;
+  }
+
+  .current_course_study_list {
+    flex: none;
+  }
+  .current_course_study_text {
+    max-width: 300px !important;
+  }
+
+  .news-main_wrapper {
+    .news_content {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      height: 350px;
+    }
   }
 
   .news_open_button {

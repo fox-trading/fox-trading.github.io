@@ -19,16 +19,12 @@ const Home = () => {
           <Main />
           <SimpleSlider />
           <div>
-            <CourseList course={COURSES_LIST} link="courses" />
+            <CourseList courses={COURSES_LIST} link="courses" />
           </div>
           <Stats />
           <Outlet />
           <div className="news-main_wrapper">
-            <NewsList
-              news={NEWS_LIST}
-              news_route="news"
-              news_overflow="news_content"
-            />
+            <NewsList news={NEWS_LIST} link="news"/>
           </div>
 
           <Merch />

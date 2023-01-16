@@ -1,6 +1,11 @@
 @import "src/Style/Colors";
 @import "src/Style/Variables";
 
+.news-list {
+  padding-top: 176px;
+  background-color: $background;
+  padding-bottom: 80px;
+}
 
 .news_open_button {
   text-align: center;
@@ -12,21 +17,19 @@
   border-radius: 4px;
 }
 
-.news-main {
-  padding-top: 176px;
-  background-color: $background;
-  padding-bottom: 80px;
-}
-
-.news {
-
-  background-color: $background;
-}
-
 .news_main {
   max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
+  background-color: $background;
+  padding-bottom: 80px;
+}
+.news_content-empty {
+  height: calc(100vh - 597px);
+  span {
+    @extend %text-style-24px;
+    color: $color-content;
+  }
 }
 
 .news_name {
@@ -35,17 +38,7 @@
   margin-bottom: 50px;
 }
 
-.news_height {
-  padding-bottom: 150px;
-}
-
 .news_content {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
-.news_content_no {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -62,15 +55,9 @@
   cursor: pointer;
 }
 
-
 .news_content_list {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-}
-.news-list {
-  padding-top: 176px;
-  background-color: $background;
-  padding-bottom: 80px;
 }
 

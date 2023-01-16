@@ -37,7 +37,7 @@
 }
 
 .current_course_about {
-  padding: 100px 0px;
+  padding: 100px 0;
 }
 
 .current_course_about_title {
@@ -67,7 +67,6 @@
   @extend %text-style-16px;
   font-family: "Roboto";
   width: 354px;
-  color: #f1e7de;
   color: $color-content;
 }
 
@@ -81,10 +80,13 @@
 
 .current_course_study_content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .current_course_study_list {
+  flex: 30.33%;
   margin-bottom: 72px;
 }
 
@@ -92,9 +94,7 @@
   @extend %text-style-20px;
   color: $color-content;
   text-transform: none;
-  width: 354px;
-  height: 72px;
-  margin-bottom: 72px;
+  max-width: 22vw;
 }
 
 .collapse {

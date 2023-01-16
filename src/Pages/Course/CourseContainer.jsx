@@ -2,18 +2,20 @@ import { Link } from "react-router-dom";
 import Button from "../../Components/Button/Button";
 
 import "./CourseContainer.scss";
-const CourseContainer = ({ picture: Image, title, text }) => {
+const CourseContainer = ({ course }) => {
+  const { id, image, name, description } = course;
+
   return (
-    <div key={title}>
+    <div>
       <div className="course_main_content">
-        <div className="course_main_img">
-          <img src={Image} alt="" className="course_main_img_" />
+        <div className="course_main_img_wrapper">
+          <img src={image} alt={name} className="course_main_img" />
         </div>
-        <div className="course_main_content_text">{title}</div>
-        <div className="course_main_content_sub">{text}</div>
+        <div className="course_main_content_text">{name}</div>
+        <div className="course_main_content_sub">{description}</div>
       </div>
       <div className="course_button">
-        <Link to={`/course/${title}`} className="underline">
+        <Link to={`/course/${id}`} className="underline">
           <Button text="Узнать подробнее" />
         </Link>
       </div>
