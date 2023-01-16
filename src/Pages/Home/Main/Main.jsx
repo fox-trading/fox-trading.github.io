@@ -8,12 +8,12 @@ import ModalJoin from "../../../Components/Modal/ModalJoin";
 
 import { ReactComponent as Down } from "../../../Imgs/down.svg";
 import { ReactComponent as Logo } from "../../../Imgs/BigLogo.svg";
-import {useRatesHook} from "../../../Hooks/useRatesHook";
+import { useRatesHook } from "../../../Hooks/useRatesHook";
 
 import "./Main.scss";
 
 const Main = () => {
-  const { rates } = useRatesHook();
+  const { rates, globalMetrics } = useRatesHook();
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -22,6 +22,7 @@ const Main = () => {
   const showModal = () => {
     setOpen(true);
   };
+
   const handleOk = () => {
     setLoading(true);
     setTimeout(() => {
@@ -30,12 +31,12 @@ const Main = () => {
       setOpenSecond(true);
     }, 3000);
   };
+
   const handleCancel = () => {
     setOpen(false);
     setOpenSecond(false);
   };
-
-
+  console.log('globalMetrics', globalMetrics)
   return (
     <div className="main">
       <div className="main_content">
@@ -52,15 +53,16 @@ const Main = () => {
           </div>
 
           <div className="main_box">
-            <div>
-              <Usd text="BTCUSD" />
-            </div>
-            <div className="main_box__content">
-              <Usd text="TSLA" />
-            </div>
-            <div>
-              <Usd text="AAPL" />
-            </div>
+            {rates.map(rate => (
+              <div>
+                <Usd text={rate.symbol} value={rate.quote.USD.price}/>
+              </div>
+            ))}
+            {globalMetrics &&
+              <div>
+                <Usd text={'Global'} value={globalMetrics.quote.USD.total_market_cap}/>
+              </div>
+            }
           </div>
         </div>
         <div>
