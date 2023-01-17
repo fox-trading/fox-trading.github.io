@@ -2,9 +2,9 @@
 @import "src/Style/Variables";
 
 .news-list {
-  padding-top: 176px;
   background-color: $background;
-  padding-bottom: 80px;
+  padding-top: 160px;
+  padding-bottom: 244px;
 }
 
 .news_open_button {
@@ -22,8 +22,8 @@
   margin-left: auto;
   margin-right: auto;
   background-color: $background;
-  padding-bottom: 80px;
 }
+
 .news_content-empty {
   height: calc(100vh - 597px);
   span {

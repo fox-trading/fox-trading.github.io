@@ -3,20 +3,30 @@
 
 .stats {
   background-color: $background;
+  padding: 160px 0;
 }
 .stats_content {
   display: flex;
   flex-direction: column;
-  margin-top: 59px;
   max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0px 40px;
+  height: 520px;
 }
+
+.stats_name {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
 .stats_text {
   @extend %text-style-36px;
   color: $color-content;
-  margin-bottom: 52px;
+  margin-right: 10px;
 }
 
-
+.stats_text:hover {
+  color: $color-point;
+  cursor: pointer;
+}

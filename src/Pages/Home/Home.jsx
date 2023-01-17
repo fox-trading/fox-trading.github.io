@@ -7,27 +7,29 @@ import Merch from "./Merch/Merch";
 import Video from "./Video/Video";
 import SimpleSlider from "../../Components/Slider/Slider";
 import { COURSES_LIST } from "../../Helpers/course";
-import { NEWS_LIST } from "../../Helpers/news";
 
 import "./Home.scss";
 
-const Home = () => {
+const Home = ({news}) => {
   return (
     <div className="home">
       <div className="home_content">
         <div>
           <Main />
           <SimpleSlider />
-          <div>
+          <div className="block-wrapper">
             <CourseList courses={COURSES_LIST} link="courses" />
           </div>
-          <Stats />
-          <Outlet />
-          <div className="news-main_wrapper">
-            <NewsList news={NEWS_LIST} link="news"/>
+          <div className="block-wrapper">
+            <Stats link="stats" />
           </div>
-
-          <Merch />
+          <Outlet />
+          {!!news?.length && <div className="block-wrapper">
+            <NewsList news={news} link="news"/>
+          </div>}
+          <div className="block-wrapper">
+            <Merch />
+          </div>
           <Video />
         </div>
       </div>

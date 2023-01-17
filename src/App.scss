@@ -84,21 +84,20 @@
   }
 
   //Stats
-  .stats_img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .stats_content {
-    max-width: none;
-  }
 
   .stats {
     display: flex;
     justify-content: flex-start;
   }
 
-  //NEws
+  .stats_content {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0px 40px;
+  }
+
+  //News
   .news_main {
     max-width: none;
     margin: 0;
@@ -106,18 +105,17 @@
   }
 
   .news_box {
-    
     margin-right: 16px;
   }
 
   //Merch
-  .shirt_content {
+  .merch_content {
+    max-width: none;
+    margin: 0;
     padding: 0 40px;
-    justify-content: flex-start;
   }
 
   //Footer
-
   .footer_content {
     max-width: none;
     padding-left: 40px;
@@ -149,14 +147,8 @@
     max-width: 30vw;
     height: auto;
   }
+
   //Current news
-
-  .current_news_ {
-    padding: 0 40px;
-    display: flex;
-    justify-content: space-between;
-  }
-
   .current_news_carusel_title {
     max-width: 100%;
     height: auto;
@@ -315,6 +307,10 @@
 }
 
 @media (max-width: 768px) {
+
+  .block-wrapper {
+    margin-top: 80px;
+  }
   //HEADER
   .header {
     padding-left: 16px;
@@ -502,10 +498,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-  }
-
-  .current_news_ {
-    padding: 0 16px;
   }
 
   .current_news_carusel_title {
@@ -726,7 +718,6 @@
 
 @media (max-width: 320px) {
   //Header
-
   .nav {
     padding: 10px 0px;
   }
@@ -866,5 +857,9 @@
   //footer
   .footer_content_list {
     margin: 0px;
+  }
+
+  .arrow {
+    align-self: center;
   }
 }

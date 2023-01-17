@@ -57,7 +57,7 @@ const Main = () => {
 
           <div className="main_box">
             {rates.map(rate => (
-              <div>
+              <div key={rate.symbol}>
                 <Usd text={rate.symbol} value={rate.quote.USD.price}/>
               </div>
             ))}

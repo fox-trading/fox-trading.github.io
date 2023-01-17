@@ -3,6 +3,7 @@
 
 .merch {
   background-color: $background;
+  padding: 0px 40px;
 }
 
 .merch_content {
@@ -11,14 +12,12 @@
   max-width: 1120px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0px 40px;
 }
 
 .merch_content_text {
   @extend %text-style-36px;
   color: $color-content;
   margin-bottom: 50px;
-  margin-top: 30px;
 }
 
 .merch_img {

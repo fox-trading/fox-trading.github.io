@@ -8,6 +8,7 @@ import NewsDetails from "./Pages/News/NewsDetails";
 import NewsList from "./Pages/News/NewsList";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
+import Stats from "./Pages/Home/Stats/Stats";
 import { useNewsHook } from "./Hooks/useNewsHook";
 
 import "./App.scss";
@@ -19,12 +20,12 @@ function App() {
     <main className="app">
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home news={news} />} />
         <Route path="/news" element={<NewsList news={news}/>} />
         <Route path="/news-details" element={<NewsDetails news={news}/>} />
         <Route path="/courses" element={<CourseList courses={COURSES_LIST}/>} />
         <Route path="/course/:name" element={<CourseDetails />} />
-
+        <Route path="/stats" element={<Stats />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       
