@@ -403,10 +403,16 @@
   .course_main_content_text {
     font-size: 36px;
   }
+
   //stats
   .stats_content {
-    padding: 0px 16px;
+    padding: 0px 16px 80px 16px;
   }
+
+  .stats_button {
+    justify-content: center;
+  }
+
   //news
   .news_box {
     width: 43%;
@@ -520,6 +526,14 @@
   .main_content__text {
     max-width: 400px;
   }
+
+  // stats
+
+  .stats_numbers {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   //news
   .news_box {
     width: 100%;
@@ -577,9 +591,6 @@
     margin-top: 0px;
   }
 
-  .stats_content {
-    margin-top: 100px;
-  }
   .current_course_study_content {
     display: flex;
     flex-direction: column;
@@ -625,8 +636,11 @@
 }
 
 @media (max-width: 480px) {
-  //main
+  .arrow {
+    align-self: center;
+  }
 
+  //main
   .main_box {
     overflow: auto;
     width: 288px;
@@ -857,9 +871,5 @@
   //footer
   .footer_content_list {
     margin: 0px;
-  }
-
-  .arrow {
-    align-self: center;
   }
 }

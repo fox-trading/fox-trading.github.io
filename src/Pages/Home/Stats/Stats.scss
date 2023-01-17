@@ -35,3 +35,21 @@
   margin-top: 20px;
   display: flex;
 }
+
+.stats_numbers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  &__item {
+    @extend %text-style-18px-roboto;
+    padding: 14px;
+    color: $color-text;
+  }
+
+  &__value {
+    @extend %text-style-24px;
+    padding: 6px;
+    color: $color-content;
+  }
+}

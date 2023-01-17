@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { ReactComponent as Vector } from "../../../Imgs/Vector.svg";
 import { TRADES_STATS } from "../../../Helpers/stats";
+import Button from "../../../Components/Button/Button";
+import { useStatsHook } from "../../../Hooks/useStatsHook";
 
 import "./Stats.scss";
-import Button from "../../../Components/Button/Button";
 
 const Stats = ({link}) => {
+  const { stats } = useStatsHook();
 
   return (
     <div className="stats">
@@ -20,12 +22,24 @@ const Stats = ({link}) => {
             <Vector />
           </div>
         </div>
+        {stats && <div className="stats_numbers">
+          <div className="stats_numbers__item">
+            Today: <span className="stats_numbers__value">{stats.for_today}</span>
+          </div>
+          <div className="stats_numbers__item">
+            This Week: <span className="stats_numbers__value">{stats.for_week}</span>
+          </div>
+          <div className="stats_numbers__item">
+            This Month: <span className="stats_numbers__value">{stats.for_month}</span>
+          </div>
+          <div className="stats_numbers__item">
+            In Total: <span className="stats_numbers__value">{stats.in_total}</span>
+          </div>
+        </div>}
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
-            width={500}
-            height={300}
             data={TRADES_STATS}
-            margin={{top: 5, right: 30, left: 20, bottom: 5,}}
+            margin={{top: 20, right: 0, left: 0, bottom: 20}}
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
