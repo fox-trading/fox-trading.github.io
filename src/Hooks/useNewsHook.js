@@ -6,8 +6,8 @@ export const useNewsHook = () => {
   const [news, setNews] = useState([]);
 
   const fetch = async () => {
-    const response = await axios.get(`${BASE_API_URL}/posts`);
     try {
+      const response = await axios.get(`${BASE_API_URL}/posts`);
       setNews(response.data);
     } catch (error) {
       console.error(error);
