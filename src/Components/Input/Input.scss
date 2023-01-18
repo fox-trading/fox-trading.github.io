@@ -1,25 +1,11 @@
 @import "../../Style/Colors.scss";
 @import "../../Style/Variables.scss";
 
-.input_title {
-  @extend %text-style-16px;
-  margin-top: 14px;
-  color: $color_title;
-  font-family: "Roboto";
-  font-weight: 500;
-}
+
 
 .input_sub_text {
   @extend %text-style-14px;
   margin-bottom: 14px;
 }
 
-.modal_input {
-  @extend %text-style-14px;
-  border: 2px solid #cdae9d;
-  margin-right: 24px;
-  background-color: white;
-  border-radius: 4px;
-  padding-right: 70px;
-  padding-left: 8px;
-}
+

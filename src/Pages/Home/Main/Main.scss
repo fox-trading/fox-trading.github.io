@@ -66,6 +66,22 @@
   margin-bottom: 16px;
 }
 
+.ant-form-item-label {
+  @extend %text-style-16px;
+  color: $color_title;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+.ant-input {
+  @extend %text-style-14px;
+  border: 2px solid #cdae9d;
+  background-color: white;
+  border-radius: 4px;
+  padding-right: 70px;
+  padding-left: 8px;
+}
+
 .modal_text {
   @extend %text-style-16px;
   color: $color_title;
@@ -78,7 +94,7 @@
   border: 1px solid $color-sub-title;
   color: $color-sub-title;
   border-radius: 4px;
-  margin-top: 66px;
+  margin-top: 16px;
 }
 
 .modal_button:hover {
@@ -109,7 +125,7 @@
 
 .ant-modal-close {
   border: 1px solid white !important;
-  border-radius: 8px !important;
+  border-radius: 50% !important;
   background-color: white !important;
 }
 
@@ -139,3 +155,15 @@
     line-height: 100px;
   }
 }
+
+.ant-row {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 24px 42px 0px;
+}
+
+
+
+
+

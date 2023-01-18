@@ -9,7 +9,7 @@ export const useRatesHook = () => {
   const fetchCurrencies = async () => {
     try {
       const response = await axios.get(`${BASE_API_URL}/rates/currencies`);
-      const data = Object.values(response.data.data)
+      const data = Object.values(response.data.data);
       setRates(data);
     } catch (error) {
       console.error(error);
@@ -19,12 +19,12 @@ export const useRatesHook = () => {
   const fetchGlobalMetrics = async () => {
     try {
       const response = await axios.get(`${BASE_API_URL}/rates/globalmetrics`);
-      const data = response.data.data
+      const data = response.data.data;
       setGlobalMetrics(data);
     } catch (error) {
       console.error(error);
     }
-  }
+  };
 
   useEffect(() => {
     fetchCurrencies();
@@ -33,6 +33,6 @@ export const useRatesHook = () => {
 
   return {
     rates,
-    globalMetrics
+    globalMetrics,
   };
 };

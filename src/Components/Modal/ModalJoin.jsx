@@ -20,6 +20,7 @@ const ModalJoin = ({ handleFinish }) => {
       form={form}
       name="register"
       onFinish={onFinish}
+      requiredMark={false}
     >
     <div className="modal">
       <div className="modal_title">Записаться на курс</div>
@@ -66,8 +67,9 @@ const ModalJoin = ({ handleFinish }) => {
           <Input placeholder="@telegram_name" />
         </Form.Item>
         <Form.Item
-          label="Email"
+          label="Emails"
           name="email"
+          
           rules={[
             {
               required: true,
