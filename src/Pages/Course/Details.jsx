@@ -1,40 +1,19 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { Button, Modal } from "antd";
 
 import { ReactComponent as Down } from "../../Imgs/down.svg";
 
-import ModalDone from "../../Components/Modal/ModalDone";
-import ModalJoin from "../../Components/Modal/ModalJoin";
 import ButtonCustom from "../../Components/Button/Button";
 import CollapseCourse from "../../Components/Collapse/Collapse";
 import { COURSES_LIST } from "../../Helpers/course";
 
 import "./Details.scss";
+import RegisterModal from '../../Components/Modal/RegisterModal';
 
 const Details = () => {
   const { name } = useParams();
   const course = COURSES_LIST.find(it => it.id === name);
-  const [loading, setLoading] = useState(false);
-  const [open, setOpen] = useState(false);
-  const [openSecond, setOpenSecond] = useState(false);
-
-  const showModal = () => {
-    setOpen(true);
-  };
-
-  const handleOk = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setOpen(false);
-      setOpenSecond(true);
-    }, 3000);
-  };
-  const handleCancel = () => {
-    setOpen(false);
-    setOpenSecond(false);
-  };
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <div className="current_course">
@@ -51,38 +30,11 @@ const Details = () => {
               Уровень сложности: {course.difficult}
             </div>
 
-            <div className="current_course_button" onClick={showModal}>
-              <ButtonCustom text="Записаться на курс" />
+            <div className="current_course_button" >
+              <ButtonCustom text="Записаться на курс" onClick={() => setShowModal(true)} />
             </div>
 
-            <Modal
-              open={openSecond}
-              title=""
-              onOk={handleOk}
-              onCancel={handleCancel}
-              footer={[]}
-            >
-              <ModalDone />
-            </Modal>
-
-            <Modal
-              open={open}
-              title=""
-              onOk={handleOk}
-              onCancel={handleCancel}
-              footer={[]}
-            >
-              <ModalJoin />
-              <Button
-                loading={loading}
-                type="primary"
-                onClick={handleOk}
-                key="submit"
-                className="modal_button"
-              >
-                Записаться на курс
-              </Button>
-            </Modal>
+            <RegisterModal show={showModal} setShow={setShowModal}/>
           </div>
           <div className="current_course_main_img">
             <img
