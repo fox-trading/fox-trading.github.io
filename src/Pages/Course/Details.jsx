@@ -73,8 +73,8 @@ const Details = () => {
         <div className="current_course_study">
           <div className="current_course_study_title">Чему вы научитесь</div>
           <div className="current_course_study_content">
-            {course.learningList.map(item => (
-              <div className="current_course_study_list">
+            {course.learningList.map((item, i) => (
+              <div key={i} className="current_course_study_list">
                 <div className="current_course_study_text">
                   {item}
                 </div>

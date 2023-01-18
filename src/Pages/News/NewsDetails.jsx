@@ -1,12 +1,14 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import Slider from "react-slick";
+
 import { ReactComponent as Right } from "../../Imgs/Left.svg";
 import { ReactComponent as Left } from "../../Imgs/Right.svg";
 
 import "./NewsDetails.scss";
 
 const NewsDetails = ({news}) => {
-
+  const { index } = useParams();
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
     <Right
       {...props}
@@ -14,7 +16,7 @@ const NewsDetails = ({news}) => {
         "slick-prev slick-arrow news_left" + (currentSlide === 0 ? " slick-disabled" : "")
       }
       aria-hidden="true"
-      aria-disabled={currentSlide === 0 ? true : false}
+      aria-disabled={currentSlide === 0}
       type="button"
     >
       Previous
@@ -29,7 +31,7 @@ const NewsDetails = ({news}) => {
         (currentSlide === slideCount - 1 ? " slick-disabled" : "")
       }
       aria-hidden="true"
-      aria-disabled={currentSlide === slideCount - 1 ? true : false}
+      aria-disabled={currentSlide === slideCount - 1}
       type="button"
     >
       Next
@@ -38,15 +40,15 @@ const NewsDetails = ({news}) => {
   
   const settings = {
     dots: true,
-    initialSlide: 1,  
+    initialSlide: index - 1,
     adaptiveHeight: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
     speed: 500,
-    nextArrow: <SlickArrowLeft  />,
-    prevArrow: <SlickArrowRight />,
+    nextArrow: <SlickArrowRight />,
+    prevArrow: <SlickArrowLeft  />,
   };
 
   return (

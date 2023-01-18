@@ -28,6 +28,7 @@ const NewsList = ({news, link}) => {
               source={item.source}
               time={item.updated_at}
               img={item.img || fox_avatar_mono}
+              index={i + 1}
             />
           ))}
 

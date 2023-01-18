@@ -1,7 +1,7 @@
 import "./NewsBox.scss";
 import { Link } from "react-router-dom";
 
-const NewsBox = ({ text, time, source, img }) => {
+const NewsBox = ({ text, time, source, img, index }) => {
   const date = time ? new Date(time) : null;
   const dateTime = time ? new Intl.DateTimeFormat('ru', {dateStyle: "short", timeStyle: "short"}).format(date) : null;
 
@@ -19,7 +19,7 @@ const NewsBox = ({ text, time, source, img }) => {
           {dateTime}/{source}
         </div>
       </div>
-      <Link to="/news-details" className="underline">
+      <Link to={`/news-details/${index}`} className="underline">
         <div className="news_box__text">{text}</div>
       </Link>
     </div>

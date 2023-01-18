@@ -18,7 +18,7 @@ const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
       "slick-prev slick-arrow" + (currentSlide === 0 ? " slick-disabled" : "")
     }
     aria-hidden="true"
-    aria-disabled={currentSlide === 0 ? true : false}
+    aria-disabled={currentSlide === 0}
     type="button"
   >
     Previous
@@ -33,7 +33,7 @@ const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
       (currentSlide === slideCount - 1 ? " slick-disabled" : "")
     }
     aria-hidden="true"
-    aria-disabled={currentSlide === slideCount - 1 ? true : false}
+    aria-disabled={currentSlide === slideCount - 1}
     type="button"
   >
     Next
@@ -50,8 +50,8 @@ export default class SimpleSlider extends Component {
       autoplay: true,
       autoplaySpeed: 3000,
       speed: 500,
-      nextArrow: <SlickArrowLeft />,
-      prevArrow: <SlickArrowRight />,
+      nextArrow: <SlickArrowRight />,
+      prevArrow: <SlickArrowLeft />,
     };
 
     const list = [

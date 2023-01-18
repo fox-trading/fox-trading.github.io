@@ -55,37 +55,14 @@
   padding-left: 60px;
 }
 
-.slick-next_news {
-  position: fixed;
-  width: 64px;
-  height: 64px;
-  z-index: 11;
-  opacity: 0.3;
-}
-
-.slick-prev_news {
-  position: fixed;
-  width: 64px;
-  height: 64px;
-  z-index: 11;
-  opacity: 0.3;
-}
-
-.slick-next_news:hover {
-  opacity: 1;
-}
-
-.slick-prev_news:hover {
-  opacity: 1;
-}
-
 .news_left {
-  
-  left: -65px;
-  top: 105px;
+  position: fixed;
+  left: 128px;
+  top: 400px;
 }
 
 .news_right {
-  top: 105px;
-  right: -65px;
+  position: fixed;
+  top: 400px;
+  right: 128px;
 }

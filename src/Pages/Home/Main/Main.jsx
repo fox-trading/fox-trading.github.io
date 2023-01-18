@@ -31,13 +31,13 @@ const Main = () => {
 
           <div className="main_box">
             {rates.map(rate => (
-              <div>
+              <div key={rate.symbol}>
                 <Usd text={rate.symbol} value={rate.quote.USD.price}/>
               </div>
             ))}
             {globalMetrics &&
               <div>
-                <Usd text={'Global'} value={globalMetrics.quote.USD.total_market_cap}/>
+                <Usd text={'GLOBAL'} value={globalMetrics.quote.USD.total_market_cap}/>
               </div>
             }
           </div>

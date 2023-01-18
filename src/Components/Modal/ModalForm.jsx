@@ -1,19 +1,20 @@
 import { Button, Form, Input } from "antd";
-// import Input from "../../Components/Input/Input";
+import { useUserRequestsHook } from "../../Hooks/useUserRequestsHook";
 
-import "./ModalJoin.scss";
+import "./ModalForm.scss";
 
-const ModalJoin = ({ handleFinish }) => {
-
+const ModalForm = ({ handleFinish }) => {
+  const { send } = useUserRequestsHook()
   const [form] = Form.useForm();
 
-  const onFinish = (values) => {
-    console.log('values', values)
+  const onFinish = async (values) => {
+    const response = await send(values);
 
-    form.resetFields();
-    handleFinish();
+    if (response.status === 200) {
+      form.resetFields();
+      handleFinish();
+    }
   }
-
 
   return (
     <Form
@@ -45,7 +46,7 @@ const ModalJoin = ({ handleFinish }) => {
           name="phone"
           rules={[
             {
-              required: true,
+              // required: true,
               message: 'Введите номер телефона.',
             },
           ]}
@@ -69,10 +70,9 @@ const ModalJoin = ({ handleFinish }) => {
         <Form.Item
           label="Emails"
           name="email"
-          
           rules={[
             {
-              required: true,
+              // required: true,
               type: 'email',
               message: 'Введите email.',
             },
@@ -96,4 +96,4 @@ const ModalJoin = ({ handleFinish }) => {
   );
 };
 
-export default ModalJoin;
+export default ModalForm;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Modal } from "antd";
 import ModalDone from './ModalDone';
-import ModalJoin from './ModalJoin';
+import ModalForm from './ModalForm';
 
 const RegisterModal = ({show, setShow}) => {
   const [loading, setLoading] = useState(false);
@@ -29,7 +29,7 @@ const RegisterModal = ({show, setShow}) => {
         onCancel={() => setShow(false)}
         footer={null}
       >
-        <ModalJoin handleFinish={handleFinish}/>
+        <ModalForm handleFinish={handleFinish}/>
       </Modal>
     </div>
   );

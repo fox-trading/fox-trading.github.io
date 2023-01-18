@@ -1,8 +1,8 @@
 import React from "react";
 import { Collapse } from "antd";
-import "./Collapse.scss";
 import { ReactComponent as Plus } from "../../Imgs/Plus.svg";
-import img from "../../Imgs/BigLogo.png";
+
+import "./Collapse.scss";
 
 const { Panel } = Collapse;
 
@@ -13,17 +13,12 @@ const CollapseCourse = ({lessons}) => (
       <div className="collapse_content" key={i}>
         <Collapse
           expandIconPosition="end"
-          key={i}
           defaultActiveKey={item.number}
-          // expandIcon={() => <Plus />}
         >
-          <Panel
-            header={<div className="collapse_name">{item.name}</div>}
-            key={i}
-          >
+          <Panel header={<div className="collapse_name">{item.name}</div>}>
             <div className="collapse_text">
               <ul>
-                {item.list.map(theme => <li>{theme}</li>)}
+                {item.list.map((theme, i) => <li key={i}>{theme}</li>)}
               </ul>
             </div>
           </Panel>
