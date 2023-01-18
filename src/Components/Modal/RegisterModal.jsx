@@ -5,40 +5,31 @@ import ModalJoin from './ModalJoin';
 
 const RegisterModal = ({show, setShow}) => {
   const [loading, setLoading] = useState(false);
-  // const [openSecond, setOpenSecond] = useState(false);
+  const [openSecond, setOpenSecond] = useState(false);
 
-  const handleOk = () => {
-    
-  };
-
-  const handleCancel = () => {
+  const handleFinish = () => {
     setShow(false);
-  };
-
-  const onFinishFailed = (errorinfo) => {
-    console.log("Failed", errorinfo);
-  };
+    setOpenSecond(true);
+  }
 
   return (
     <div>
-      {/* <Modal
+      <Modal
         open={openSecond}
         title=""
-        onOk={handleOk}
-        onCancel={handleCancel}
+        onCancel={() => setOpenSecond(false)}
         footer={[]}
       >
         <ModalDone />
-      </Modal> */}
+      </Modal>
 
       <Modal
         open={show}
         title=""
-        onOk={handleOk}
-        onCancel={handleCancel}
-        footer={[]}
+        onCancel={() => setShow(false)}
+        footer={null}
       >
-        <ModalJoin />
+        <ModalJoin handleFinish={handleFinish}/>
       </Modal>
     </div>
   );

@@ -3,15 +3,21 @@ import { Button, Form, Input } from "antd";
 
 import "./ModalJoin.scss";
 
-const ModalJoin = () => {
+const ModalJoin = ({ handleFinish }) => {
+
+  const [form] = Form.useForm();
 
   const onFinish = (values) => {
     console.log('values', values)
+
+    form.resetFields();
+    handleFinish();
   }
 
 
   return (
     <Form
+      form={form}
       name="register"
       onFinish={onFinish}
     >
@@ -22,22 +28,24 @@ const ModalJoin = () => {
       </div>
       <div className="modal_registr">
         <Form.Item
+          label="Имя"
           name="username"
           rules={[
             {
               required: true,
-              message: 'Введите Ваше имя.',
+              message: 'Введите имя.',
             },
           ]}
         >
           <Input placeholder="Имя" />
         </Form.Item>
         <Form.Item
+          label="Телефон"
           name="phone"
           rules={[
             {
               required: true,
-              message: 'Введите Ваш номер телефона.',
+              message: 'Введите номер телефона.',
             },
           ]}
         >
@@ -46,23 +54,25 @@ const ModalJoin = () => {
       </div>
       <div className="modal_registr">
         <Form.Item
+          label="Телеграм"
           name="telegram"
           rules={[
             {
               required: true,
-              message: 'Введите Телеграм',
+              message: 'Введите телеграм.',
             },
           ]}
         >
           <Input placeholder="@telegram_name" />
         </Form.Item>
         <Form.Item
+          label="Email"
           name="email"
           rules={[
             {
               required: true,
               type: 'email',
-              message: 'Введите Email',
+              message: 'Введите email.',
             },
           ]}
         >
