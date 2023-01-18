@@ -27,8 +27,8 @@ export const useRatesHook = () => {
   }
 
   useEffect(() => {
-    // fetchCurrencies();
-    // fetchGlobalMetrics();
+    fetchCurrencies();
+    fetchGlobalMetrics();
   }, []);
 
   return {
