@@ -11,8 +11,7 @@ import { ReactComponent as Logo } from "../../../Imgs/BigLogo.svg";
 import { useRatesHook } from "../../../Hooks/useRatesHook";
 
 import "./Main.scss";
-import Input from '../../../Components/Input/Input';
-
+import Input from "../../../Components/Input/Input";
 
 const Main = () => {
   const { rates, globalMetrics } = useRatesHook();
@@ -38,6 +37,7 @@ const Main = () => {
     setOpen(false);
     setOpenSecond(false);
   };
+
   const onFinishFailed = (errorinfo) => {
     console.log("Failed", errorinfo);
   };
@@ -56,8 +56,9 @@ const Main = () => {
           </div>
 
           <div className="main_box">
+            
             {rates.map(rate => (
-              <div key={rate.symbol}>
+              <div>
                 <Usd text={rate.symbol} value={rate.quote.USD.price}/>
               </div>
             ))}
@@ -96,8 +97,7 @@ const Main = () => {
         footer={[]}
       >
         <Form
-        layout="vertical"
-
+          layout="vertical"
           onFinish={handleOk}
           onFinishFailed={onFinishFailed}
           autoComplete="off"
@@ -110,9 +110,7 @@ const Main = () => {
 
             <div className="modal_registr">
               <div>
-
-                  <Input title="Имя" placeholder="Иван" />
-
+                <Input title="Имя" placeholder="Иван" />
               </div>
               <div>
                 <Input title="Телефон" type="text" placeholder="+996" />

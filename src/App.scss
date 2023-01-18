@@ -307,7 +307,6 @@
 }
 
 @media (max-width: 768px) {
-
   .block-wrapper {
     margin-top: 80px;
   }
@@ -606,13 +605,11 @@
     max-width: 300px !important;
   }
 
-  .news-main_wrapper {
-    .news_content {
-      display: flex;
-      flex-direction: column;
-      overflow: auto;
-      height: 350px;
-    }
+  .news_content {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 350px;
   }
 
   .news_open_button {
@@ -802,8 +799,6 @@
     justify-content: center;
     align-items: center;
   }
-
-  
 
   //slider
   .slider {
