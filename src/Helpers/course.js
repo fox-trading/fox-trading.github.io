@@ -1,5 +1,5 @@
 import CryptoBoost from "../Imgs/CryptoBoost.png";
-import CryptoGain from "../Imgs/CryptoGain.png";
+import TradeUpgrade from "../Imgs/TradeUpgrade.png";
 import PointCard from "../Imgs/PointCard.png";
 import PaperCard from "../Imgs/PaperCard.png";
 import ChatCard from "../Imgs/ChatCard.png";
@@ -139,7 +139,7 @@ export const COURSES_LIST = [
       "Курс нацелен на уже имеющих опыт трейдеров, задача которого сформировать четкую и понятную торговую систему для любой фазы рынка.",
     subDescription:
       'Ответить на вопросы, которые накопились за время нахождения в рынке. Главным образом, данный курс позволит научиться грамотно управлять депозитом.',
-    image: CryptoGain,
+    image: TradeUpgrade,
     difficult: "от 1 до 3 года опыта торговли",
     learningList: [
       'Подробно изучите инструменты кластерного и объемного анализа',
