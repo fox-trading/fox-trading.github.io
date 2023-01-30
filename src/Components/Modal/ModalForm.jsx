@@ -3,12 +3,13 @@ import { useUserRequestsHook } from "../../Hooks/useUserRequestsHook";
 
 import "./ModalForm.scss";
 
-const ModalForm = ({ handleFinish }) => {
+const ModalForm = ({ handleFinish, course }) => {
   const { send } = useUserRequestsHook()
   const [form] = Form.useForm();
 
   const onFinish = async (values) => {
-    const response = await send(values);
+    const payload = {...values, course};
+    const response = await send(payload);
 
     if (response.status === 200) {
       form.resetFields();

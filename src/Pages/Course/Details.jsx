@@ -34,7 +34,7 @@ const Details = () => {
               <ButtonCustom text="Записаться на курс" onClick={() => setShowModal(true)} />
             </div>
 
-            <RegisterModal show={showModal} setShow={setShowModal}/>
+            <RegisterModal show={showModal} setShow={setShowModal} course={course.name}/>
           </div>
           <div className="current_course_main_img">
             <img

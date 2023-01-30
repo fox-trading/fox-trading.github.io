@@ -3,8 +3,7 @@ import { Modal } from "antd";
 import ModalDone from './ModalDone';
 import ModalForm from './ModalForm';
 
-const RegisterModal = ({show, setShow}) => {
-  const [loading, setLoading] = useState(false);
+const RegisterModal = ({show, setShow, course}) => {
   const [openSecond, setOpenSecond] = useState(false);
 
   const handleFinish = () => {
@@ -29,7 +28,7 @@ const RegisterModal = ({show, setShow}) => {
         onCancel={() => setShow(false)}
         footer={null}
       >
-        <ModalForm handleFinish={handleFinish}/>
+        <ModalForm handleFinish={handleFinish} course={course}/>
       </Modal>
     </div>
   );

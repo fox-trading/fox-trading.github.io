@@ -10,6 +10,8 @@ import { COURSES_LIST } from "../../Helpers/course";
 
 import "./Home.scss";
 
+const NEWS_COUNT = 3;
+
 const Home = ({news}) => {
   return (
     <div className="home">
@@ -25,12 +27,12 @@ const Home = ({news}) => {
           </div>
           <Outlet />
           {!!news?.length && <div className="block-wrapper">
-            <NewsList news={news} link="news"/>
+            <NewsList news={news.slice(0, NEWS_COUNT)} link="news"/>
           </div>}
           <div className="block-wrapper">
             <Merch />
           </div>
-          <Video />
+          {/*<Video />*/}
         </div>
       </div>
     </div>
