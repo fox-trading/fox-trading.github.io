@@ -2,15 +2,18 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { ReactComponent as Vector } from "../../../Imgs/Vector.svg";
-import { TRADES_STATS } from "../../../Helpers/stats";
 import Button from "../../../Components/Button/Button";
 import { useStatsHook } from "../../../Hooks/useStatsHook";
 
 import "./Stats.scss";
 
 const Stats = ({link}) => {
-  const { stats } = useStatsHook();
+  const { stats, chartData } = useStatsHook();
 
+  const data = chartData.map(d => ({
+    name: d.date ? new Intl.DateTimeFormat('ru', {dateStyle: "short"}).format(new Date(d.date)) : '',
+    trades: d.value
+  }))
   return (
     <div className="stats">
       <div className="stats_content">
@@ -38,10 +41,10 @@ const Stats = ({link}) => {
         </div>}
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
-            data={TRADES_STATS}
+            data={data}
             margin={{top: 20, right: 0, left: 0, bottom: 20}}
           >
-            <CartesianGrid strokeDasharray="3 3" />
+            <CartesianGrid strokeDasharray="3 1" />
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />

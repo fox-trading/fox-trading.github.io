@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NewsBox = ({ text, time, source, img, index }) => {
   const date = time ? new Date(time) : null;
-  const dateTime = time ? new Intl.DateTimeFormat('ru', {dateStyle: "short", timeStyle: "short"}).format(date) : null;
+  const dateTime = time ? new Intl.DateTimeFormat('ru', {dateStyle: "short"}).format(date) : null;
 
   return (
     <div className="news_box">

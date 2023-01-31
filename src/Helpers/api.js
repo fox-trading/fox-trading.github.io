@@ -1,1 +1,1 @@
-export const BASE_API_URL = 'http://167.71.137.174:4001/api' //'http://localhost:4000/api';
+export const BASE_API_URL = 'http://api.foxtraders.ru/api'; //'http://localhost:4000/api';

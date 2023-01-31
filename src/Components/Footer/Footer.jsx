@@ -8,8 +8,8 @@ import { ReactComponent as Logo } from "../../Imgs/Logo.svg";
 
 import "./Footer.scss";
 const Footer = () => {
-  const setActive = ({ isActive }) =>
-    isActive ? "active_link_" : "footer_content_item";
+  const setActive = ({ isActive }) => isActive ? "active_link_" : "footer_content_item";
+  const currentYear = new Date().getFullYear();
   return (
     <div className="footer">
       <div className="footer_content">
@@ -28,22 +28,22 @@ const Footer = () => {
                 <NavLink to="/news" className={setActive}>
                   Новости
                 </NavLink>
+                <NavLink to="/stats" className={setActive}>
+                  Статистика
+                </NavLink>
               </div>
-              <div className="footer_content_item disabled">Статистика</div>
             </div>
-            <div>
-              <div className="footer_content_item disabled">О нас</div>
-              <div className="footer_content_item disabled">Калькулятор</div>
-              <div className="footer_content_item disabled">Мерч</div>
-            </div>
+            {/*<div>*/}
+            {/*  <div className="footer_content_item disabled">О нас</div>*/}
+            {/*  <div className="footer_content_item disabled">Калькулятор</div>*/}
+            {/*  <div className="footer_content_item disabled">Мерч</div>*/}
+            {/*</div>*/}
           </div>
         </div>
         <div>
           <div className="footer_content_icon">
             {/* <div className="footer_icons">
-              
               <Facebook />
-              
             </div> */}
             {/* <div className="footer_icons">
               <Twitter />
@@ -68,7 +68,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="footer_name_company">Fox Traders 2023</div>
+          <div className="footer_name_company">©Fox Traders {currentYear}</div>
         </div>
       </div>
     </div>
