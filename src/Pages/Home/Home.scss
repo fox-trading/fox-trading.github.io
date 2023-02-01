@@ -3,6 +3,7 @@
 
   .news-list {
     height: auto;
+    min-height: auto;
     padding: 0;
     padding-top: 100px;
   }
@@ -10,14 +11,18 @@
   .course {
     padding: 0;
     height: auto;
+    min-height: auto;
   }
 
   .stats {
     padding: 0;
+    height: auto;
+    min-height: auto;
   }
 
   .merch {
     height: auto;
     padding: 0;
+    min-height: auto;
   }
 }
