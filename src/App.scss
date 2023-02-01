@@ -22,7 +22,11 @@ html {
   background: $background;
 }
 
-@media (max-width: 1200px) {
+.slick-slide {
+  overflow: hidden; padding-right: 1px;
+}
+
+@media (max-width: 1280px) {
   //Header
   .nav {
   }
@@ -158,7 +162,7 @@ html {
   }
 
   .current_news_content {
-    width: 65vw !important;
+    width: 66vw !important;
     height: auto;
   }
 
@@ -337,16 +341,19 @@ html {
   .slider_list {
     max-width: 100%;
   }
+  .home_content {
   .slick-next {
-    width: 48px;
-    height: 48px;
-    top: 20%;
+      width: 48px;
+      height: 48px;
+      top: 12%;
+    }
   }
-
-  .slick-prev {
-    width: 48px;
-    height: 48px;
-    top: 20%;
+  .home_content {
+    .slick-prev {
+      width: 48px;
+      height: 48px;
+      top: 12%;
+    }
   }
   .slider_content {
     display: flex;
@@ -497,15 +504,17 @@ html {
     padding: 0px 16px;
   }
 
-  .slick-next_news {
-    width: 48px !important;
-    height: 48px !important;
-  }
-
-  .slick-prev_news {
-    width: 48px !important;
-    height: 48px !important;
-  }
+  //.news_left {
+  //  width: 48px !important;
+  //  height: 48px !important;
+  //  top: 200px;
+  //}
+  //
+  //.prev_news {
+  //  width: 48px !important;
+  //  height: 48px !important;
+  //  top: 200px;
+  //}
 
   .current_news_rigth {
     display: flex;
@@ -728,13 +737,14 @@ html {
   .current_course_button {
     display: block !important;
   }
+  .home_content {
+    .slick-next {
+      top: 10%;
+    }
 
-  .slick-next {
-    top: 13%;
-  }
-
-  .slick-prev {
-    top: 13%;
+    .slick-prev {
+      top: 10%;
+    }
   }
 }
 
@@ -818,19 +828,22 @@ html {
     padding-right: 16px;
   }
 
-  .slick-next {
-    width: 18px;
-    height: 18px;
-    top: 12%;
-    right: -5px;
-  }
+  .home_content {
+    .slick-next {
+      width: 18px;
+      height: 18px;
+      top: 8%;
+      right: -5px;
+    }
 
-  .slick-prev {
-    width: 18px;
-    height: 18px;
-    top: 12%;
-    left: -5px;
-    z-index: 11;
+
+    .slick-prev {
+      width: 18px;
+      height: 18px;
+      top: 8%;
+      left: -5px;
+      z-index: 11;
+    }
   }
 
   .slick-list {
