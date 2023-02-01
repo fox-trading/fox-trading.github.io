@@ -4,6 +4,7 @@
 .current_news {
   padding-top: 196px;
   background-color: $background;
+  min-height: calc(100vh - 369px);
 }
 
 .current_news_carusel {
@@ -29,9 +30,9 @@
 
 .current_news_carusel_text {
   @extend %text-style-24px;
-  color: $color-text;
-  width: 780px;
+  color: $color-text !important;
   margin-bottom: 32px;
+  word-break: break-word;
 }
 
 .current_news_img {
@@ -57,12 +58,12 @@
 
 .news_left {
   position: fixed;
-  left: 128px;
   top: 400px;
+  left: 5%
 }
 
 .news_right {
   position: fixed;
   top: 400px;
-  right: 128px;
+  right: 5%;
 }

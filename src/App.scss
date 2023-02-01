@@ -46,9 +46,8 @@
   }
 
   .slick-list {
-    max-width: none;
+    //max-width: none;
     margin: 0;
-    padding: 0px 16px;
   }
 
   .slider_coin {
@@ -162,6 +161,14 @@
   .current_news_carusel_text {
     max-width: 100%;
     height: auto;
+
+    p {
+      max-width: 100% !important;
+    }
+
+    img {
+      max-width: 100% !important;
+    }
   }
 
   .current_news_img_ {
