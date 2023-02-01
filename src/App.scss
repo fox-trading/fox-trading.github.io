@@ -1,6 +1,10 @@
 @import "src/Style/Colors";
 @import "src/Style/Variables";
 
+html {
+  scroll-behavior: smooth;
+}
+
 .underline {
   text-decoration: none;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import {Link, NavLink, useLocation, useNavigate} from "react-router-dom";
 import { Drawer } from "antd";
 import { ReactComponent as Logo } from "../../Imgs/Logo.svg";
 import { ReactComponent as Menu } from "../../Imgs/Menu.svg";
@@ -8,6 +8,7 @@ import SelectSmall from "../Language/Language";
 import "./Header.scss";
 
 const Header = () => {
+  const location = useLocation();
   const [open, setOpen] = useState(false);
 
   const showDrawer = () => {
@@ -19,7 +20,7 @@ const Header = () => {
   };
 
   const setActive = ({ isActive }) => isActive ? "active_link" : "nav_content__text";
-  const isRoot = false // window.location.pathname === '/';
+  const isRoot = location.pathname === '/';
 
   return (
     <div className="nav">
