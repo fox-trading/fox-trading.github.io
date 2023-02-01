@@ -33,6 +33,10 @@
   color: $color-text !important;
   margin-bottom: 32px;
   word-break: break-word;
+
+  p:last-child {
+    display: none;
+  }
 }
 
 .current_news_img {
