@@ -42,13 +42,13 @@ const Header = () => {
         <Drawer placement="right" onClose={onClose} open={open} width="220px" >
           <div className="drawer_nav_content">
             <div className="drawer_nav_content_sub">
-              <NavLink to="/courses" className={setActive} onClose={onClose}>
+              <NavLink to="/courses" className={setActive} onClick={onClose}>
                 Курсы
               </NavLink>
-              <NavLink to="/news" className={setActive} onClose={onClose}>
+              <NavLink to="/news" className={setActive} onClick={onClose}>
                 Новости
               </NavLink>
-              <NavLink to="/stats" className={setActive} onClose={onClose}>
+              <NavLink to="/stats" className={setActive} onClick={onClose}>
                 Статистика
               </NavLink>
             </div>
