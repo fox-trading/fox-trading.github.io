@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   const setActive = ({ isActive }) => isActive ? "active_link" : "nav_content__text";
-  const isRoot = window.location.pathname === '/';
+  const isRoot = false // window.location.pathname === '/';
 
   return (
     <div className="nav">
