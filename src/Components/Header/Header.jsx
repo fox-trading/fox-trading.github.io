@@ -19,14 +19,19 @@ const Header = () => {
   };
 
   const setActive = ({ isActive }) => isActive ? "active_link" : "nav_content__text";
+  const isRoot = window.location.pathname === '/';
 
   return (
     <div className="nav">
       <div className="header">
         <div className="nav_content__img">
-          <Link to="/" className="underline">
-            <Logo />
-          </Link>
+          {isRoot ? (
+            <a href="#home"><Logo /></a>
+          ) : (
+            <Link to="/" className="underline">
+              <Logo />
+            </Link>
+          )}
         </div>
 
         <div className="header_menu">

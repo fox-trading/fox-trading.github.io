@@ -4,6 +4,7 @@
 .stats {
   background-color: $background;
   padding: 160px 0;
+  min-height: calc(100vh - 495px);
 }
 .stats_content {
   display: flex;

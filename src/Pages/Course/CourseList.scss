@@ -19,6 +19,7 @@
   background: $background;
   padding-top: 160px;
   padding-bottom: 40px;
+  min-height: calc(100vh - 375px);
 }
 
 .course_content {

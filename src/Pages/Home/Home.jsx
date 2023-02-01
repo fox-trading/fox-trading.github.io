@@ -14,7 +14,7 @@ const NEWS_COUNT = 3;
 
 const Home = ({news}) => {
   return (
-    <div className="home">
+    <div id="home"  className="home">
       <div className="home_content">
         <div>
           <Main />

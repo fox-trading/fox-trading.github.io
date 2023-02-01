@@ -48,7 +48,7 @@ export default class SimpleSlider extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 5000,
       speed: 500,
       nextArrow: <SlickArrowRight />,
       prevArrow: <SlickArrowLeft />,
@@ -56,7 +56,7 @@ export default class SimpleSlider extends Component {
 
     const list = [
       {
-        title: "Время это деньги",
+        title: "Время - это деньги",
         text: "Занимаясь своим образованием в сфере трейдинга, встает главный вопрос - а потраченное время окупится?",
         text_discription: "Определенно да! ",
         sub_text:

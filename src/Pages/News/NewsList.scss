@@ -4,7 +4,8 @@
 .news-list {
   background-color: $background;
   padding-top: 160px;
-  padding-bottom: 244px;
+  //padding-bottom: 244px;
+  min-height: calc(100vh - 335px);
 }
 
 .news_open_button {

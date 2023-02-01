@@ -69,7 +69,7 @@ const ModalForm = ({ handleFinish, course }) => {
           <Input placeholder="@telegram_name" />
         </Form.Item>
         <Form.Item
-          label="Emails"
+          label="Email"
           name="email"
           rules={[
             {
