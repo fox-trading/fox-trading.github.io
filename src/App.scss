@@ -724,6 +724,14 @@
   .current_course_button {
     display: block !important;
   }
+
+  .slick-next {
+    top: 13%;
+  }
+
+  .slick-prev {
+    top: 13%;
+  }
 }
 
 @media (max-width: 320px) {
