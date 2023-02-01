@@ -14,13 +14,13 @@
   @extend %text-style-36px;
   color: $color-content;
   margin-bottom: 24px;
+  word-break: break-word;
 }
 
 .slider_text {
   @extend %text-style-20px;
   color: $color-text;
   margin-top: 24px;
-  width: 523px;
   text-transform: none;
 }
 
@@ -36,6 +36,7 @@
   max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
+  border: 1px solid #fff;
 }
 
 .slider_list {
