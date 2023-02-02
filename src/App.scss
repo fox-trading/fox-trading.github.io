@@ -263,6 +263,9 @@ html {
 
   //COURSE
 
+  .course_main_content_sub {
+    max-width: 360px;
+  }
   .current_course_about_img {
     width: 30vw;
     height: auto;
@@ -318,11 +321,17 @@ html {
   }
   //MAIN
 
-  //course
+  .main_list {
+    align-items: center;
+    .main_content__text {
+      text-align: center;
+    }
+  }
 
   .course_main_content_sub {
-    max-width: 330px;
+    max-width: 300px;
   }
+  //course
 }
 
 @media (max-width: 768px) {
@@ -384,9 +393,21 @@ html {
     height: 269px;
   }
   //course
+
+  .course_main_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .course_main_content_sub {
     font-size: 20px;
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
   }
+
   .course {
     display: flex;
     justify-content: center;
@@ -402,19 +423,9 @@ html {
     height: auto;
   }
 
-  .course_main_content {
-    display: flex;
-    flex-direction: column;
-  }
-
   .course_button {
     display: flex;
     justify-content: center;
-  }
-
-  .course_main_content_sub {
-    max-width: 400px;
-    height: auto;
   }
 
   .news_main {
@@ -667,10 +678,6 @@ html {
     max-width: 288px;
   }
 
-  .course_main_content_sub {
-    max-width: 288px;
-  }
-
   .main_box__content {
     margin: 0px 8px;
   }
@@ -737,13 +744,6 @@ html {
 }
 
 @media (max-width: 390px) {
-  .main_list {
-    display: block;
-  }
-
-  .course_button {
-    display: block;
-  }
 
   .current_course_button {
     display: block !important;
@@ -818,14 +818,8 @@ html {
     max-width: 288px;
   }
 
-  .main_content {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
   .main_content__join {
     text-align: center;
-    width: 288px;
     margin-bottom: 40px;
   }
 
@@ -889,17 +883,6 @@ html {
   //course
   .course_main_img {
     width: 90vw;
-  }
-
-  .course_main_content_sub {
-    display: flex;
-    text-align: left;
-  }
-
-  .course_main_content_text {
-    display: flex;
-    text-align: left;
-    justify-content: flex-start;
   }
 
   //footer
