@@ -323,7 +323,8 @@ html {
 
   .main_list {
     align-items: center;
-    .main_content__text {
+
+    .main_content__name, .main_content__text {
       text-align: center;
     }
   }
@@ -426,9 +427,8 @@ html {
     height: auto;
   }
 
-  .course_button {
-    display: flex;
-    justify-content: center;
+  .course_main_container {
+    align-items: center;
   }
 
   .news_main {
@@ -554,7 +554,7 @@ html {
   }
 
   .main_content__text {
-    max-width: 400px;
+    max-width: 100%
   }
 
   // stats
@@ -562,11 +562,17 @@ html {
   .stats_numbers {
     display: flex;
     flex-wrap: wrap;
+
+    &__item {
+      padding: 6px 0;
+      width: 40%;
+    }
   }
 
   //news
   .block-wrapper {
     .news-list {
+      padding-top: 60px;
       text-align: center;
     }
   }
@@ -641,11 +647,6 @@ html {
     max-width: 300px !important;
   }
 
-  //.news_content {
-  //  display: flex;
-  //  flex-direction: column;
-  //}
-
   .news_open_button {
     margin-top: 40px;
   }
@@ -664,6 +665,17 @@ html {
   .modal_success_text {
     max-width: 288px;
   }
+
+  .main_box {
+    width: 100%;
+    overflow: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -672,19 +684,6 @@ html {
   }
 
   //main
-  .main_box {
-    overflow: auto;
-    width: 288px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .main_content__text {
-    max-width: 288px;
-  }
 
   .main_box__content {
     margin: 0px 8px;
@@ -692,6 +691,18 @@ html {
 
   .main_content__name {
     font-size: 48px;
+  }
+
+  .course_main_container, .stats_button {
+    display: block;
+  }
+  .main_list {
+    display: block;
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
   }
 
   // slider
@@ -823,7 +834,6 @@ html {
 
   .main_content__text {
     font-size: 20px;
-    max-width: 288px;
   }
 
   .main_content__join {
@@ -893,6 +903,9 @@ html {
     width: 90vw;
   }
 
+  .stats_numbers__item {
+    width: 46%;
+  }
   //footer
   .footer_content_list {
     margin: 0px;

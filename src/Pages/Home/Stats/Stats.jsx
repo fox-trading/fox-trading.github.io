@@ -27,26 +27,30 @@ const Stats = ({link}) => {
         </div>
         {stats && <div className="stats_numbers">
           <div className="stats_numbers__item">
-            Today: <span className="stats_numbers__value">{stats.for_today}</span>
+            <div>За Сегодня:</div>
+            <div className="stats_numbers__value">{stats.for_today}</div>
           </div>
           <div className="stats_numbers__item">
-            This Week: <span className="stats_numbers__value">{stats.for_week}</span>
+            <div>За Неделю:</div>
+            <div className="stats_numbers__value">{stats.for_week}</div>
           </div>
           <div className="stats_numbers__item">
-            This Month: <span className="stats_numbers__value">{stats.for_month}</span>
+            <div>За Месяц:</div>
+            <span className="stats_numbers__value">{stats.for_month}</span>
           </div>
           <div className="stats_numbers__item">
-            In Total: <span className="stats_numbers__value">{stats.in_total}</span>
+            <div>Всего:</div>
+            <span className="stats_numbers__value">{stats.in_total}</span>
           </div>
         </div>}
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
             data={data}
-            margin={{top: 20, right: 0, left: 0, bottom: 20}}
+            margin={{top: 0, right: 0, left: 0, bottom: 0}}
           >
             <CartesianGrid strokeDasharray="3 1" />
             <XAxis dataKey="name" />
-            <YAxis />
+            <YAxis  width={40}/>
             <Tooltip />
             <Legend />
             <Line type="monotone" dataKey="trades" stroke="#1befef" />

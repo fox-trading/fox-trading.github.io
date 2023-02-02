@@ -1,7 +1,10 @@
 @import "src/Style/Colors";
 @import "src/Style/Variables";
-.course_button {
+
+.course_main_container {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .course_main_img_wrapper {

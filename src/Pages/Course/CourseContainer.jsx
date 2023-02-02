@@ -6,7 +6,7 @@ const CourseContainer = ({ course }) => {
   const { id, image, name, description } = course;
 
   return (
-    <div>
+    <div className="course_main_container">
       <div className="course_main_content">
         <div className="course_main_img_wrapper">
           <img src={image} alt={name} className="course_main_img" />
