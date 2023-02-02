@@ -356,9 +356,12 @@ html {
     max-width: 60%;
     height: auto;
   }
+
   .slider_list {
     max-width: 100%;
+    text-align: center;
   }
+
   .slider {
     .slick-list {
       max-height: 600px;
@@ -562,6 +565,11 @@ html {
   }
 
   //news
+  .block-wrapper {
+    .news-list {
+      text-align: center;
+    }
+  }
   .news_box {
     width: 100%;
   }
