@@ -19,7 +19,7 @@ const NewsBox = ({ text, time, source, img, index }) => {
           {dateTime}/{source}
         </div>
       </div>
-      <Link to={`/news-details/${index}`} className="underline">
+      <Link to={`/news/${index}`} className="underline">
         <div className="news_box__text">{text}</div>
       </Link>
     </div>

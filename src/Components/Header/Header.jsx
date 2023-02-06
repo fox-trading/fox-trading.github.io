@@ -19,8 +19,8 @@ const Header = () => {
     setOpen(false);
   };
 
-  const setActive = ({ isActive }) => isActive ? "active_link" : "nav_content__text";
   const isRoot = location.pathname === '/';
+  const isActive = (route) => location.pathname.includes(route) ? "active_link" : "nav_content__text";
 
   return (
     <div className="nav">
@@ -42,13 +42,13 @@ const Header = () => {
         <Drawer placement="right" onClose={onClose} open={open} width="220px" >
           <div className="drawer_nav_content">
             <div className="drawer_nav_content_sub">
-              <NavLink to="/courses" className={setActive} onClick={onClose}>
+              <NavLink to="/courses" className={() => isActive('course')} onClick={onClose}>
                 Курсы
               </NavLink>
-              <NavLink to="/news" className={setActive} onClick={onClose}>
+              <NavLink to="/news" className={() => isActive('news')} onClick={onClose}>
                 Новости
               </NavLink>
-              <NavLink to="/stats" className={setActive} onClick={onClose}>
+              <NavLink to="/stats" className={() => isActive('stats')} onClick={onClose}>
                 Статистика
               </NavLink>
             </div>
@@ -70,13 +70,13 @@ const Header = () => {
         </Drawer>
 
         <div className="nav_content">
-          <NavLink to="/courses" className={setActive}>
+          <NavLink to="/courses" className={() => isActive('course')}>
             Курсы
           </NavLink>
-          <NavLink to="/news" className={setActive}>
+          <NavLink to="/news" className={() => isActive('news')}>
             Новости
           </NavLink>
-          <NavLink to="/stats" className={setActive}>
+          <NavLink to="/stats" className={() => isActive('stats')}>
             Статистика
           </NavLink>
           {/*<div className="nav_content__text disabled">О нас</div>*/}
