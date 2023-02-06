@@ -811,6 +811,9 @@ html {
 
   //slider
   .slider {
+    .slick-list {
+      max-height: 770px;
+    }
     .slick-next {
       top: 12%;
     }
@@ -905,8 +908,6 @@ html {
 
   .slider .slick-list {
     max-width: 250px;
-    //height: auto;
-    max-height: 770px;
     margin-left: auto;
     margin-right: auto;
   }
