@@ -6,9 +6,10 @@ import { ReactComponent as Down } from "../../Imgs/down.svg";
 import ButtonCustom from "../../Components/Button/Button";
 import CollapseCourse from "../../Components/Collapse/Collapse";
 import { COURSES_LIST } from "../../Helpers/course";
+import RegisterModal from '../../Components/Modal/RegisterModal';
+import BreadCrumb from "../../Components/BreadCrumb/BreadCrumb";
 
 import "./Details.scss";
-import RegisterModal from '../../Components/Modal/RegisterModal';
 
 const Details = () => {
   const { name } = useParams();
@@ -18,6 +19,7 @@ const Details = () => {
   return (
     <div className="current_course">
       <div className="current_course_">
+        <BreadCrumb text={'Назад'} path={'/courses'} />
         <div className="current_course_main">
           <div className="current_course_list">
             <div className="current_course_title">{course.name}</div>

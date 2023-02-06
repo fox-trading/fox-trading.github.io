@@ -23,7 +23,8 @@ html {
 }
 
 .slick-slide {
-  overflow: hidden; padding-right: 1px;
+  overflow: hidden;
+  //padding-right: 1px;
 }
 .slider {
   .slick-list {
@@ -551,7 +552,7 @@ html {
   .current_news_carusel {
     display: flex;
     justify-content: center;
-    padding: 0px 16px;
+    padding: 0 4px;
   }
 
   .current_news_rigth {
@@ -789,7 +790,7 @@ html {
   }
 
   .current_course_ {
-    padding-top: 160px;
+    //padding-top: 160px;
   }
 
   .current_course_list {
@@ -835,9 +836,7 @@ html {
   }
 
   .header {
-    max-width: 304px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-top: 0 16px;
   }
 
   .svg_content {
@@ -856,11 +855,10 @@ html {
   //Main
 
   .main {
-    padding-top: 120px;
+    padding-top: 80px;
   }
 
   .main_content {
-    max-width: 304px;
     padding-left: 16px;
     padding-right: 16px;
     flex-wrap: wrap;
@@ -868,7 +866,6 @@ html {
 
   .main_content__name {
     font-size: 36px;
-    max-width: 203px;
     margin-top: 44px;
   }
 
@@ -914,9 +911,10 @@ html {
     }
   }
 
-  .slick-list {
+  .slider .slick-list {
     max-width: 250px;
-    height: auto;
+    //height: auto;
+    max-height: 770px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -943,6 +941,14 @@ html {
   }
 
   //course
+  .news-list,
+  .course {
+    padding-top: 80px;
+  }
+
+  .current_course_ {
+    padding-top: 62px;
+  }
   .course_main_img {
     width: 90vw;
   }

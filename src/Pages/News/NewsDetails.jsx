@@ -1,15 +1,16 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import {useParams} from "react-router-dom";
 import Slider from "react-slick";
 
-import { ReactComponent as Right } from "../../Imgs/Left.svg";
-import { ReactComponent as Left } from "../../Imgs/Right.svg";
+import {ReactComponent as Right} from "../../Imgs/Left.svg";
+import {ReactComponent as Left} from "../../Imgs/Right.svg";
 
 import "./NewsDetails.scss";
+import BreadCrumb from "../../Components/BreadCrumb/BreadCrumb";
 
 const NewsDetails = ({news}) => {
-  const { index } = useParams();
-  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+  const {index} = useParams();
+  const SlickArrowLeft = ({currentSlide, slideCount, ...props}) => (
     <Right
       {...props}
       className={
@@ -22,8 +23,8 @@ const NewsDetails = ({news}) => {
       Previous
     </Right>
   );
-  
-  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
+
+  const SlickArrowRight = ({currentSlide, slideCount, ...props}) => (
     <Left
       {...props}
       className={
@@ -37,7 +38,7 @@ const NewsDetails = ({news}) => {
       Next
     </Left>
   );
-  
+
   const settings = {
     dots: true,
     initialSlide: index - 1,
@@ -47,29 +48,29 @@ const NewsDetails = ({news}) => {
     slidesToScroll: 1,
     autoplay: false,
     speed: 500,
-    nextArrow: <SlickArrowRight />,
-    prevArrow: <SlickArrowLeft  />,
+    nextArrow: <SlickArrowRight/>,
+    prevArrow: <SlickArrowLeft/>,
   };
 
   return (
-    <div>
-      <div className="current_news">
-          <div className="current_news_content">
-            <Slider {...settings}>
-              {news.map((item, i) => (
-                <div key={i}>
-                  <div className="current_news_carusel">
-                    <div className="current_news_carusel_title">{item.title}</div>
-                    <div className="current_news_carusel_text">
-                      <div dangerouslySetInnerHTML={{__html: item.content}}/>
-                    </div>
-                  </div>
+    <div className="current_news">
+      <div className="current_news_content">
+        <BreadCrumb text={'Назад'} path={'/news'}/>
+        <Slider {...settings}>
+          {news.map((item, i) => (
+            <div key={i}>
+              <div className="current_news_carusel">
+                <div className="current_news_carusel_title">{item.title}</div>
+                <div className="current_news_carusel_text">
+                  <div dangerouslySetInnerHTML={{__html: item.content}}/>
                 </div>
-              ))}
-            </Slider>
-        </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
+
   );
 };
 

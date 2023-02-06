@@ -2,12 +2,13 @@
 @import "src/Style/Variables";
 
 .current_news {
-  padding-top: 196px;
+  padding-top: 112px;
   background-color: $background;
   min-height: calc(100vh - 369px);
 }
 
 .current_news_carusel {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
