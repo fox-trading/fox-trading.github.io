@@ -39,7 +39,7 @@ const Header = () => {
           <Menu onClick={showDrawer} />
         </div>
 
-        <Drawer placement="right" onClose={onClose} open={open} width="220px" >
+        <Drawer placement="right" onClose={onClose} open={open} width="68%" >
           <div className="drawer_nav_content">
             <div className="drawer_nav_content_sub">
               <NavLink to="/courses" className={() => isActive('course')} onClick={onClose}>
@@ -51,6 +51,7 @@ const Header = () => {
               <NavLink to="/stats" className={() => isActive('stats')} onClick={onClose}>
                 Статистика
               </NavLink>
+              <div></div>
             </div>
             {/*<div className="nav_content__text nav_content__text_drawer disabled">*/}
             {/*  О нас*/}

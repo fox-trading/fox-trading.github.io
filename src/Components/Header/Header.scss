@@ -31,10 +31,6 @@
   text-decoration: none;
 }
 
-.css-1869usk-MuiFormControl-root {
-  margin: 0px !important;
-}
-
 .nav_content__t {
   @extend %text-style-20px;
   color: $color-point;
@@ -47,12 +43,6 @@
 
 .header_menu {
   display: none;
-}
-
-.ant-drawer-header-title {
-  display: flex;
-  flex-direction: row-reverse;
-  padding: 0;
 }
 
 .disabled {
@@ -87,16 +77,40 @@
   @extend %text-style-20px;
   margin-right: 32px;
   
-  color: $color-content;
   text-transform: uppercase;
-  text-decoration: none;
 }
 
-.ant-drawer .ant-drawer-body {
-  overflow: unset;
-}
+.ant-drawer {
+  .ant-drawer-content {
+    background: $color-content;
+  }
+  .ant-drawer-body {
+    //overflow: unset;
+    padding: 140px 40px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.ant-drawer .ant-drawer-close {
-  color: $color-title;
+  .ant-drawer-close {
+    color: $color-title;
+    padding: 0;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .ant-drawer-header {
+    padding: 20px !important;
+    border: none !important;
+  }
+
+  .ant-drawer-header-title {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0;
+  }
 }
 
