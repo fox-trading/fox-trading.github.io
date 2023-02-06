@@ -43,94 +43,8 @@
   margin-bottom: 80px;
 }
 
-.main_content__join:hover {
-  background-color: $color-point;
-  color: black;
-}
-
 .main_box__content {
   margin: 0px 8px;
-}
-
-.modal {
-  background-color: $color-content !important;
-}
-
-.modal_registr {
-  display: flex;
-}
-
-.modal_title {
-  @extend %text-style-36px;
-  color: $color_title;
-  margin-bottom: 16px;
-}
-
-.ant-form-item-label {
-  @extend %text-style-16px;
-  color: $color_title;
-  font-family: "Roboto";
-  font-weight: 500;
-}
-
-.ant-input {
-  @extend %text-style-14px;
-  border: 2px solid #cdae9d;
-  background-color: white;
-  border-radius: 4px;
-  padding-right: 70px;
-  padding-left: 8px;
-}
-
-.modal_text {
-  @extend %text-style-16px;
-  color: $color_title;
-  margin-bottom: 26px;
-  font-family: "Roboto";
-}
-
-.modal_button {
-  background-color: $color-content;
-  border: 1px solid $color-sub-title;
-  color: $color-sub-title;
-  border-radius: 4px;
-  margin-top: 16px;
-}
-
-.modal_button:hover {
-  background-color: $color-point;
-  color: black;
-}
-
-.modal_success_img {
-  margin-bottom: 16px;
-  margin-top: 32px;
-}
-
-.modal_success {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal_success_text {
-  @extend %text-style-16px;
-  color: $color-title;
-  font-family: "Roboto";
-  width: 318px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.ant-modal-close {
-  border: 1px solid white !important;
-  border-radius: 50% !important;
-  background-color: white !important;
-}
-
-.ant-btn-primary:hover {
-  background-color: $color-sub-title !important;
 }
 
 .main_down {
@@ -155,15 +69,6 @@
     line-height: 100px;
   }
 }
-
-.ant-row {
-  display: flex !important;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px 24px 42px 0px;
-}
-
-
 
 
 

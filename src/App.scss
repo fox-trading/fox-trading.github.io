@@ -9,8 +9,136 @@ html {
   text-decoration: none;
 }
 
+
+.ant-modal {
+  width: 660px !important;
+}
+
+.modal {
+  background-color: $color-content !important;
+}
+
+.modal_registr {
+  display: flex;
+  justify-content: space-between;
+
+  .ant-form-item {
+    width: 48%;
+  }
+}
+
+.modal_title {
+  @extend %text-style-36px;
+  color: $color_title;
+  margin-bottom: 16px;
+}
+
+.ant-form-item-label {
+  @extend %text-style-16px;
+  color: $color_title;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+
+.ant-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ant-form-item-control {
+  flex: none !important;
+  width: 100%;
+}
+.ant-input {
+  @extend %text-style-20px;
+  font-weight: 400;
+  border: 2px solid #cdae9d;
+  background-color: white;
+  border-radius: 4px;
+  padding: 12px 16px;
+  text-transform: none;
+  color: $color-title;
+}
+
+.ant-input:hover {
+  border-color: $color-sub-title;
+  border-inline-end-width: 2px;
+}
+
+.modal_text {
+  @extend %text-style-16px;
+  color: $color_title;
+  margin-bottom: 26px;
+  font-family: "Roboto";
+}
+
+.modal_button {
+  @extend %text-style-20px;
+  background-color: $color-content;
+  border: 1px solid $color-sub-title;
+  color: $color-sub-title;
+  border-radius: 4px;
+  margin-top: 16px;
+  padding: 12px 32px;
+  font-weight: 300;
+  text-transform: none;
+}
+
+.ant-btn {
+  height: auto !important;
+}
+
+.modal_button:hover {
+  background-color: $color-point;
+  color: black;
+}
+
+.modal_success_img {
+  margin-bottom: 16px;
+  margin-top: 32px;
+}
+
+.modal_success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_success_text {
+  @extend %text-style-16px;
+  color: $color-title;
+  font-family: "Roboto";
+  width: 318px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ant-modal-close {
+  border: 1px solid white !important;
+  border-radius: 50% !important;
+  background-color: white !important;
+}
+
+.ant-btn-primary:hover {
+  background-color: $color-sub-title !important;
+}
+
 .ant-modal-content {
   background-color: $color-content !important;
+  padding: 40px !important;
+
+  .ant-form-item-label > label {
+    @extend %text-style-18px-roboto;
+    color: $color_title !important;
+    font-weight: 600;
+
+    ant-form-item-control-input-content {
+
+    }
+  }
 }
 
 .svg_content {
@@ -693,19 +821,37 @@ html {
     margin-top: 40px;
   }
 
+  .ant-modal-content {
+    padding: 24px 20px !important;
+
+    .ant-modal-body {
+      margin-top: 36px;
+    }
+  }
+
   .modal_input {
     max-width: 100%;
   }
 
   .modal_registr {
     display: flex;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    .ant-form-item, .ant-form-item-control {
+      width: 100%;
+    }
+
   }
 
   .modal_success_text {
     max-width: 288px;
+  }
+
+  .modal_button {
+    width: 100%;
   }
 
   .main_box {
@@ -798,7 +944,7 @@ html {
   }
 
   .modal {
-    max-width: 220px;
+    //max-width: 220px;
     margin-left: auto;
     margin-right: auto;
   }
