@@ -160,8 +160,8 @@ html {
   }
 
   .current_course_study_text {
-    max-width: 30vw;
-    height: auto;
+    //max-width: 30vw;
+    //height: auto;
   }
 
   //Current news
@@ -262,44 +262,68 @@ html {
   }
 
   //COURSE
-
   .course_main_content_sub {
     max-width: 360px;
   }
+
+  //COURSE DETAILS
+  .current_course_main {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    .current_course_button {
+      justify-content: center;
+    }
+  }
+
+  .current_course_about {
+
+  }
+
+  .current_course_about_content div {
+    padding: 0 4px;
+  }
+
   .current_course_about_img {
-    width: 30vw;
+    //width: 30vw;
+    width: 100%;
     height: auto;
   }
+
   .current_course_about_name {
-    max-width: 250px;
+    //max-width: 250px;
+    width: 100%;
     height: auto;
   }
-
   .current_course_about_text {
-    max-width: 250px;
+    //max-width: 250px;
+    width: 100%;
     height: auto;
   }
 
+  .current_course_study_list {
+    margin-bottom: 20px;
+  }
   .current_course_study_text {
-    margin-right: 20px;
-    max-width: 28vw;
+    //margin-right: 20px;
+    //max-width: 28vw;
   }
 
   .current_course_item {
-    max-width: 400px;
+    //max-width: 400px;
+    //text-align: center;
   }
 
   .current_course_list {
     margin-right: 20px;
   }
 
-  .current_course_main {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
   .current_course_main_img {
     margin-bottom: 20px;
+  }
+
+  .collapse {
+    margin-top: 80px;
   }
 
   .drawer_nav_content_sub {
@@ -585,30 +609,39 @@ html {
     flex-wrap: wrap;
   }
 
-  .current_course_about_text {
-    width: auto !important;
-    max-width: 350px !important;
-    height: auto;
+  .current_course_about_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
-  .current_course_about_name {
-    width: auto !important;
-    max-width: 350px !important;
+  .current_course_about_wrapper {
+    margin-bottom: 40px;
+  }
+
+  .current_course_about_title {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .current_course_about_name,
+  .current_course_about_text {
+    width: auto;
+    max-width: 354px;
     height: auto;
   }
 
   .current_course_about_img {
-    width: auto !important;
-  }
-
-  .current_course_about_content {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    width: 100%;
   }
 
   .current_course_list {
     width: 85vw;
+  }
+
+  .current_course_study {
+    margin-top: 40px;
   }
 
   .current_course_item {
@@ -636,17 +669,33 @@ html {
     display: flex;
     flex-direction: column;
     overflow: auto;
-    max-width: 450px;
-    height: 350px;
+    height: 254px;
   }
 
   .current_course_study_list {
-    flex: none;
-  }
-  .current_course_study_text {
-    max-width: 300px !important;
+    width: auto;
+    margin-bottom: 20px;
   }
 
+  .collapse_title,
+  .current_course_study_title {
+    text-align: center;
+  }
+
+  .current_course_study_text {
+    min-height: 50px;
+  }
+
+  .collapse {
+    margin-top: 0px;
+  }
+
+
+  .current_news_carusel {
+    p {
+      text-align: center !important;
+    }
+  }
   .news_open_button {
     margin-top: 40px;
   }
@@ -740,7 +789,7 @@ html {
   }
 
   .current_course_ {
-    padding-top: 200px !important;
+    padding-top: 160px;
   }
 
   .current_course_list {
@@ -751,8 +800,8 @@ html {
     font-size: 48px !important;
   }
 
-  .current_course_about {
-    padding: 40px 0;
+  .collapse {
+    margin-top: 40px;
   }
 
   .modal {
@@ -763,11 +812,6 @@ html {
 }
 
 @media (max-width: 390px) {
-
-  .current_course_button {
-    display: block !important;
-  }
-
   .current_news_carusel_title {
     font-weight: 500;
   }

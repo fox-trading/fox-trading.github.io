@@ -23,8 +23,8 @@
 .current_news_carusel_title {
   @extend %text-style-36px;
   color: $color-content;
-  width: 780px;
   margin-bottom: 48px;
+  text-align: center;
 }
 
 .current_news_carusel_text {

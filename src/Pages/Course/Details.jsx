@@ -55,7 +55,7 @@ const Details = () => {
           </div>
           <div className="current_course_about_content">
             {course.listAbout.map((item, i) => (
-              <div key={i}>
+              <div className="current_course_about_wrapper" key={i}>
                 <div className="current_course_about_img">
                   <img
                     src={item.img}
