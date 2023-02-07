@@ -1,14 +1,64 @@
 @import "src/Style/Colors";
 @import "src/Style/Variables";
 
+.news-list {
+  background-color: $background;
+  padding-top: 160px;
+  //padding-bottom: 244px;
+  min-height: calc(100vh - 335px);
+}
+
+.news_open_button {
+  text-align: center;
+}
+
+.news_open_button:hover {
+  background-color: $color-point;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.news_main {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $background;
+}
+
+.news_content-empty {
+  height: calc(100vh - 597px);
+  span {
+    @extend %text-style-24px;
+    color: $color-content;
+  }
+}
+
+.news_name {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+.news_content {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.news_name__text {
+  @extend %text-style-36px;
+  color: $color-content;
+  margin-right: 8px;
+}
+
+.news_name__text:hover {
+  color: $color-point;
+  cursor: pointer;
+}
 
 .news_content_list {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-.news-list {
-  padding-top: 176px;
-  background-color: $background;
-  padding-bottom: 80px;
-}
+

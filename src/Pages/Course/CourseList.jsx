@@ -4,10 +4,9 @@ import { ReactComponent as Vector } from "../../Imgs/Vector.svg";
 
 import "./CourseList.scss";
 
-const CourseList = ({ course, footer, header, link }) => {
+const CourseList = ({ courses, link }) => {
   return (
     <>
-      {header}
       <div className="course">
         <div className="course_content">
           <div className="course_open_vector">
@@ -19,18 +18,12 @@ const CourseList = ({ course, footer, header, link }) => {
             </div>
           </div>
           <div className="course_list">
-            {course.map((item, i) => (
-              <CourseContainer
-                key={i}
-                picture={item.image}
-                text={item.description}
-                title={item.name}
-              />
+            {courses.map((item) => (
+              <CourseContainer key={item.id} course={item}/>
             ))}
           </div>
         </div>
       </div>
-      <div className="course_open_footer">{footer}</div>
     </>
   );
 };

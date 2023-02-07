@@ -1,39 +1,40 @@
 import NewsBox from "./NewsBox";
-import { ReactComponent as Vector } from "../../Imgs/Vector.svg";
+import {ReactComponent as Vector} from "../../Imgs/Vector.svg";
 import fox_avatar_mono from "../../Imgs/fox_avatar_mono.png";
+import {Link} from "react-router-dom";
+import Button from "../../Components/Button/Button";
 
 import "./NewsList.scss";
 
-const NewsList = ({ news, header, footer, button }) => {
+const NewsList = ({news, link}) => {
   return (
-    <div>
-      {header}
-      <div className="news-list">
-        <div className="news">
-          <div className="news_main">
-            <div className="news_name">
-              <div className="news_name__text">Новости</div>
-
-              <div>
-              <Vector />
-              </div>
-            </div>
-            <div className="news_content_list">
-              {news.map((item, i) => (
-                <NewsBox
-                  key={i}
-                  text={item.title}
-                  source={item.source}
-                  time={item.updated_at}
-                  img={item.img || fox_avatar_mono}
-                />
-              ))}
-            </div>
-            <div className="news_open_button">{button}</div>
+    <div className="news-list">
+      <div className="news_main">
+        <div className="news_name">
+          <Link to={link} className="underline">
+            <div className="news_name__text">Новости</div>
+          </Link>
+          <div>
+            <Vector/>
           </div>
         </div>
+
+        <div className="news_content">
+          {!news.length && <div className='news_content-empty'><span>No news yet</span></div>}
+          {news.map((item, i) => (
+            <NewsBox
+              key={i}
+              text={item.title}
+              source={item.source}
+              time={item.updated_at}
+              img={item.img || fox_avatar_mono}
+              index={i + 1}
+            />
+          ))}
+
+        </div>
+        {/*<div className="news_open_button"><Button text=" Показать еще новости" /></div>*/}
       </div>
-      {footer}
     </div>
   );
 };

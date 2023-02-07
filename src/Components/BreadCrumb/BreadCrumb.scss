@@ -1,0 +1,27 @@
+@import "src/Style/Colors";
+@import "src/Style/Variables";
+
+.breadcrumb {
+  a {
+    display: flex;
+    //justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  &_arrow {
+    transform: scaleX(-1);
+    margin-right: 6px;
+    height: 22px;
+  }
+
+  &_title {
+    @extend %text-style-24px;
+    color: $color-content;
+  }
+
+  &_title:hover {
+    color: $color-point;
+  }
+
+}

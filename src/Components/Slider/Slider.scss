@@ -14,13 +14,13 @@
   @extend %text-style-36px;
   color: $color-content;
   margin-bottom: 24px;
+  word-break: break-word;
 }
 
 .slider_text {
   @extend %text-style-20px;
   color: $color-text;
   margin-top: 24px;
-  width: 523px;
   text-transform: none;
 }
 
@@ -31,7 +31,7 @@
 
 .slider_content {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   max-width: 1120px;
   margin-left: auto;
@@ -41,6 +41,7 @@
 .slider_list {
   display: flex;
   flex-direction: column;
+  max-width: 550px;
 }
 
 .slick-dots li button:before {
@@ -52,6 +53,8 @@
   height: 64px;
   z-index: 11;
   opacity: 0.3;
+  top: 50%;
+  right: -35px;
 }
 
 .slick-prev {
@@ -59,6 +62,8 @@
   height: 64px;
   z-index: 11;
   opacity: 0.3;
+  top: 50%;
+  left: -35px;
 }
 
 .slick-next:hover {

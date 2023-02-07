@@ -6,13 +6,14 @@
 }
 
 .current_course_ {
-  padding-top: 234px;
+  padding-top: 112px;
   max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .current_course_main {
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,7 +38,7 @@
 }
 
 .current_course_about {
-  padding: 100px 0px;
+  margin-top: 80px;
 }
 
 .current_course_about_title {
@@ -67,38 +68,42 @@
   @extend %text-style-16px;
   font-family: "Roboto";
   width: 354px;
-  color: #f1e7de;
   color: $color-content;
+}
+
+.current_course_study {
+  margin-top: 80px;
 }
 
 .current_course_study_title {
   @extend %text-style-36px;
   color: $color-content;
 
-  margin-top: 60px;
   margin-bottom: 48px;
 }
 
 .current_course_study_content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .current_course_study_list {
+  width: 30%;
   margin-bottom: 72px;
+  margin-right: 20px;
 }
 
 .current_course_study_text {
   @extend %text-style-20px;
   color: $color-content;
   text-transform: none;
-  width: 354px;
-  height: 72px;
-  margin-bottom: 72px;
+  //max-width: 22vw;
 }
 
 .collapse {
-  margin-bottom: 80px;
+padding-bottom: 80px;
 }
 
 .css-dev-only-do-not-override-1e67qka .ant-btn-primary:not(:disabled):hover {

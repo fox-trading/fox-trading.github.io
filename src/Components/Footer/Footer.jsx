@@ -8,8 +8,8 @@ import { ReactComponent as Logo } from "../../Imgs/Logo.svg";
 
 import "./Footer.scss";
 const Footer = () => {
-  const setActive = ({ isActive }) =>
-    isActive ? "active_link_" : "footer_content_item";
+  const setActive = ({ isActive }) => isActive ? "active_link_" : "footer_content_item";
+  const currentYear = new Date().getFullYear();
   return (
     <div className="footer">
       <div className="footer_content">
@@ -28,36 +28,47 @@ const Footer = () => {
                 <NavLink to="/news" className={setActive}>
                   Новости
                 </NavLink>
+                <NavLink to="/stats" className={setActive}>
+                  Статистика
+                </NavLink>
               </div>
-              <div className="footer_content_item disabled">Статистика</div>
             </div>
-            <div>
-              <div className="footer_content_item disabled">О нас</div>
-              <div className="footer_content_item disabled">Калькулятор</div>
-              <div className="footer_content_item disabled">Мерч</div>
-            </div>
+            {/*<div>*/}
+            {/*  <div className="footer_content_item disabled">О нас</div>*/}
+            {/*  <div className="footer_content_item disabled">Калькулятор</div>*/}
+            {/*  <div className="footer_content_item disabled">Мерч</div>*/}
+            {/*</div>*/}
           </div>
         </div>
         <div>
           <div className="footer_content_icon">
-            <div className="footer_icons">
+            {/* <div className="footer_icons">
               <Facebook />
-            </div>
-            <div className="footer_icons">
+            </div> */}
+            {/* <div className="footer_icons">
               <Twitter />
+            </div> */}
+            <div className="footer_icons">
+              <a href="https://www.instagram.com/0therfox/" target="_blank">
+                <Instagram />
+              </a>
             </div>
             <div className="footer_icons">
-              <Instagram />
+              <a
+                href="https://www.youtube.com/channel/UCYqXkPAmCoFvzg6X6knRucw"
+                target="_blank"
+              >
+                <YouTube />
+              </a>
             </div>
             <div className="footer_icons">
-              <YouTube />
-            </div>
-            <div className="footer_icons">
-              <Telegram />
+              <a href="https://t.me/foxautome" target="_blank">
+                <Telegram />
+              </a>
             </div>
           </div>
 
-          <div className="footer_name_company">Fox Traders 2023</div>
+          <div className="footer_name_company">©Fox Traders {currentYear}</div>
         </div>
       </div>
     </div>

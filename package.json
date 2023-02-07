@@ -19,6 +19,7 @@
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
+    "recharts": "^2.3.2",
     "sass": "^1.56.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.6",
@@ -30,7 +31,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "scp -r ./build/* root@167.71.137.174:/var/www/foxtraders.ru/html"
   },
   "eslintConfig": {
     "extends": [

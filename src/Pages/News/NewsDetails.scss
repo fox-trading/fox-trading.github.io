@@ -2,11 +2,13 @@
 @import "src/Style/Variables";
 
 .current_news {
-  padding-top: 196px;
+  padding-top: 112px;
   background-color: $background;
+  min-height: calc(100vh - 369px);
 }
 
 .current_news_carusel {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -22,15 +24,19 @@
 .current_news_carusel_title {
   @extend %text-style-36px;
   color: $color-content;
-  width: 780px;
   margin-bottom: 48px;
+  text-align: center;
 }
 
 .current_news_carusel_text {
   @extend %text-style-24px;
-  color: $color-text;
-  width: 780px;
+  color: $color-text !important;
   margin-bottom: 32px;
+  word-break: break-word;
+
+  p:last-child {
+    display: none;
+  }
 }
 
 .current_news_img {
@@ -54,30 +60,14 @@
   padding-left: 60px;
 }
 
-.current_news_ {
-  display: flex;
-}
-
-.slick-next_news {
+.news_left {
   position: fixed;
-  width: 64px;
-  height: 64px;
-  z-index: 11;
-  opacity: 0.3;
+  top: 380px;
+  left: 5%
 }
 
-.slick-prev_news {
+.news_right {
   position: fixed;
-  width: 64px;
-  height: 64px;
-  z-index: 11;
-  opacity: 0.3;
-}
-
-.slick-next_news:hover {
-  opacity: 1;
-}
-
-.slick-prev_news:hover {
-  opacity: 1;
+  top: 380px;
+  right: 5%;
 }
