@@ -1,26 +1,47 @@
-import React, { useState } from "react";
-import {Link, NavLink, useLocation, useNavigate} from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {Link, NavLink, redirect, useLocation, useNavigate} from "react-router-dom";
 import { Drawer } from "antd";
 import { ReactComponent as Logo } from "../../Imgs/Logo.svg";
 import { ReactComponent as Menu } from "../../Imgs/Menu.svg";
-import SelectSmall from "../Language/Language";
+
+import useTokenHook from "../../Hooks/useTokenHook";
+import ModalLogin from "../Modal/ModalLogin";
 
 import "./Header.scss";
 
-const Header = () => {
+const Header = ({user, setUser}) => {
   const location = useLocation();
-  const [open, setOpen] = useState(false);
+  const { setToken } = useTokenHook();
+  const [openMenu, setOpenMenu] = useState(false);
+  const [openLogin, setOpenLogin] = useState(false);
+  const [isLoginForm, setIsLoginForm] = useState(false);
 
   const showDrawer = () => {
-    setOpen(true);
+    setOpenMenu(true);
   };
 
-  const onClose = () => {
-    setOpen(false);
+  const onCloseMenu = () => {
+    setOpenMenu(false);
   };
+
+  const handleLogin = () => {
+    setOpenLogin(true)
+    setIsLoginForm(true)
+  }
+
+  const handleSingUp = () => {
+    setOpenLogin(true)
+    setIsLoginForm(false)
+  }
+
+  const handleLogout = () => {
+    setToken(null);
+    setUser(null);
+  }
 
   const isRoot = location.pathname === '/';
   const isActive = (route) => location.pathname.includes(route) ? "active_link" : "nav_content__text";
+
 
   return (
     <div className="nav">
@@ -39,16 +60,16 @@ const Header = () => {
           <Menu onClick={showDrawer} />
         </div>
 
-        <Drawer placement="right" onClose={onClose} open={open} width="68%" >
+        <Drawer placement="right" onClose={onCloseMenu} openMenu={openMenu} width="68%" >
           <div className="drawer_nav_content">
             <div className="drawer_nav_content_sub">
-              <NavLink to="/courses" className={() => isActive('course')} onClick={onClose}>
+              <NavLink to="/courses" className={() => isActive('course')} onClick={onCloseMenu}>
                 Курсы
               </NavLink>
-              <NavLink to="/news" className={() => isActive('news')} onClick={onClose}>
+              <NavLink to="/news" className={() => isActive('news')} onClick={onCloseMenu}>
                 Новости
               </NavLink>
-              <NavLink to="/stats" className={() => isActive('stats')} onClick={onClose}>
+              <NavLink to="/stats" className={() => isActive('stats')} onClick={onCloseMenu}>
                 Статистика
               </NavLink>
               <div></div>
@@ -87,7 +108,31 @@ const Header = () => {
         {/* <div className="nav_content__t">
           <SelectSmall onClick={() => changeLanguage("ru")} />
         </div> */}
+
+
+        {user ? (
+          <div className="profile">
+            <NavLink to="/dashboard" className="login">Личный Кабинет</NavLink>
+            <div className="user-block">
+              <NavLink to="/dashboard" className="email">{user.email}</NavLink>
+              <NavLink to="/"  onClick={handleLogout} className="exit">Выйти</NavLink>
+            </div>
+          </div>
+        ) : (
+          <div>
+            <button className="login" onClick={handleLogin}>Войти</button>
+            <button className="login" onClick={handleSingUp}>Регистрация</button>
+          </div>
+        )}
       </div>
+
+      <ModalLogin
+        show={openLogin}
+        close={() => setOpenLogin(false)}
+        setUser={setUser}
+        isLoginForm={isLoginForm}
+        setIsLoginForm={setIsLoginForm}
+      />
     </div>
   );
 };

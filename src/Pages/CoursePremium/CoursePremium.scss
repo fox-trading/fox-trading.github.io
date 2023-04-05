@@ -1,0 +1,49 @@
+@import "src/Style/Colors";
+@import "src/Style/Variables";
+
+.course_premium {
+  min-height: calc(100vh - 375px);
+  padding: 160px 40px 40px;
+
+  &-header {
+    @extend %text-style-36px;
+    color: $color-content;
+    margin-bottom: 40px;
+  }
+
+  &-content {
+    display: flex;
+    width: 100%;
+
+    .lessons {
+      width: 30%;
+
+      .collapse_list {
+        padding: 10px 28px;
+
+        li {
+          cursor: pointer;
+        }
+
+        li:hover {
+          color: $color-text;
+        }
+      }
+    }
+
+    .details {
+      width: 70%;
+      padding: 0px 28px;
+
+      &-title {
+        @extend %text-style-24px;
+        color: $color-text;
+        margin-bottom: 20px;
+      }
+
+      &-description {
+
+      }
+    }
+  }
+}

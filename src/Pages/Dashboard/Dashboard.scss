@@ -1,0 +1,50 @@
+@import "src/Style/Colors";
+@import "src/Style/Variables";
+
+.dashboard {
+  min-height: calc(100vh - 375px);
+  padding-top: 160px;
+  padding-bottom: 40px;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .header {
+    @extend %text-style-36px;
+    color: $color-content;
+    margin-bottom: 40px;
+  }
+
+  .ant-card {
+    background: $color-content;
+    border: 0;
+  }
+
+  .ant-card-head-title {
+    @extend %text-style-24px;
+    color: $color-sub-title;
+  }
+  &-content {
+    .fields {
+      display: flex;
+      justify-content: start;
+      //align-items: flex-end;
+      margin-bottom: 8px;
+      &_label {
+        @extend %text-style-18px-roboto;
+        color: $color_title;
+        margin-right: 6px;
+        min-width: 260px;
+      }
+
+      &_value {
+        @extend %text-style-20px;
+        color: $color-title;
+      }
+    }
+
+    .course-premium_button {
+      margin-top: 40px;
+    }
+  }
+}

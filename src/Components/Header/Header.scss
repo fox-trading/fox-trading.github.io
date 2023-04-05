@@ -31,16 +31,29 @@
   text-decoration: none;
 }
 
-.nav_content__t {
-  @extend %text-style-20px;
-  color: $color-point;
-}
-
 .nav_content__text:hover {
   color: $color-point;
   cursor: pointer;
 }
 
+.login {
+  @extend %text-style-20px;
+  color: $color-content;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: none;
+  border: none;
+}
+
+.login:hover {
+  color: $color-point;
+  cursor: pointer;
+}
+
+.nav_content__t {
+  @extend %text-style-20px;
+  color: $color-point;
+}
 .header_menu {
   display: none;
 }
@@ -80,6 +93,30 @@
   text-transform: uppercase;
 }
 
+.profile {
+  display: flex;
+  align-items: center;
+
+  .user-block {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      @extend %text-style-14px;
+      text-decoration: none;
+      color: $color-content;
+    }
+
+    a:hover {
+      color: $color-point;
+    }
+    .email {
+
+    }
+  }
+
+}
 .ant-drawer {
   .ant-drawer-content {
     background: $color-content;

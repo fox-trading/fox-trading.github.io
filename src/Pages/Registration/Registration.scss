@@ -1,0 +1,22 @@
+@import "src/Style/Colors";
+@import "src/Style/Variables";
+
+.sing-up_container, .login_container {
+  .title {
+    @extend %text-style-36px;
+    color: $color_title;
+    margin-bottom: 16px;
+  }
+
+}
+
+.link {
+  @extend %text-style-14px-roboto;
+  color: $color-title;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: $color-text;
+}

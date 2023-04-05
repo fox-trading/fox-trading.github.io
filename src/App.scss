@@ -1,14 +1,25 @@
 @import "src/Style/Colors";
 @import "src/Style/Variables";
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 9999s ease-in-out 0s;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: $background;
+  color: $color-content;
 }
 
 .underline {
   text-decoration: none;
 }
-
 
 .ant-modal {
   width: 660px !important;
@@ -51,7 +62,7 @@ html {
   flex: none !important;
   width: 100%;
 }
-.ant-input {
+.ant-input, .ant-input-password {
   @extend %text-style-20px;
   font-weight: 400;
   border: 2px solid #cdae9d;
@@ -62,9 +73,13 @@ html {
   color: $color-title;
 }
 
-.ant-input:hover {
-  border-color: $color-sub-title;
-  border-inline-end-width: 2px;
+.ant-input, .ant-input-password {
+  &:hover,
+  &:focus,
+  &:active  {
+    border-color: $color-sub-title !important;
+    border-inline-end-width: 2px !important;
+  }
 }
 
 .modal_text {

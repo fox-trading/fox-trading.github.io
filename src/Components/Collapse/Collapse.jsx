@@ -1,6 +1,5 @@
 import React from "react";
 import { Collapse } from "antd";
-import { ReactComponent as Plus } from "../../Imgs/Plus.svg";
 
 import "./Collapse.scss";
 
