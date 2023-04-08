@@ -60,7 +60,7 @@ const Header = ({user, setUser}) => {
           <Menu onClick={showDrawer} />
         </div>
 
-        <Drawer placement="right" onClose={onCloseMenu} openMenu={openMenu} width="68%" >
+        <Drawer placement="right" onClose={onCloseMenu} open={openMenu} width="68%" >
           <div className="drawer_nav_content">
             <div className="drawer_nav_content_sub">
               <NavLink to="/courses" className={() => isActive('course')} onClick={onCloseMenu}>
@@ -72,7 +72,20 @@ const Header = ({user, setUser}) => {
               <NavLink to="/stats" className={() => isActive('stats')} onClick={onCloseMenu}>
                 Статистика
               </NavLink>
-              <div></div>
+              {user ? (
+          <div className="profile">
+            <NavLink to="/dashboard" className="login">Личный Кабинет</NavLink>
+            <div className="user-block">
+              <NavLink to="/dashboard" className="email">{user.email}</NavLink>
+              <NavLink to="/"  onClick={handleLogout} className="exit">Выйти</NavLink>
+            </div>
+          </div>
+        ) : (
+          <div className="profile_sidebar_buttons">
+            <button className="login" onClick={handleLogin}>Войти</button>
+            <button className="login" onClick={handleSingUp}>Регистрация</button>
+          </div>
+        )}
             </div>
             {/*<div className="nav_content__text nav_content__text_drawer disabled">*/}
             {/*  О нас*/}
@@ -119,7 +132,7 @@ const Header = ({user, setUser}) => {
             </div>
           </div>
         ) : (
-          <div>
+          <div className="profile_buttons">
             <button className="login" onClick={handleLogin}>Войти</button>
             <button className="login" onClick={handleSingUp}>Регистрация</button>
           </div>

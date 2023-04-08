@@ -6,6 +6,9 @@
     @extend %text-style-36px;
     color: $color_title;
     margin-bottom: 16px;
+    @media (max-width: 390px) {
+      font-size: 30px;
+    }
   }
 
 }
@@ -15,6 +18,8 @@
   color: $color-title;
   text-decoration: none;
   cursor: pointer;
+
+ 
 }
 
 .link:hover {

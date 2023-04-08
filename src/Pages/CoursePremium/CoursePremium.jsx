@@ -1,12 +1,18 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { Collapse } from "antd";
+import ModalPremiumCourse from "../../Components/Modal/ModalPremiumCourse"
 import './CoursePremium.scss';
 
 const { Panel } = Collapse;
 
-export default function CoursePremium ({ user }) {
+export default function CoursePremium({ user }) {
+  const [show, setShow] = useState(false)
   const navigate = useNavigate();
+  const showModal = () => {
+    setShow(true);
+
+  };
   const lessons = [
     {
       name: 'Урок 1. Технический анализ',
@@ -46,29 +52,41 @@ export default function CoursePremium ({ user }) {
 
   return (
     <div className="course_premium">
-      <h1 className="course_premium-header">Course Upgrade</h1>
+      <h1 className="course_premium-header" >Course Upgrade</h1>
       <div className="course_premium-content">
         <div className="lessons">
-        {lessons.map((item) => (
-          <Collapse
-            expandIconPosition="end"
-            defaultActiveKey={item.number}
-          >
-            <Panel header={<div className="collapse_name">{item.name}</div>}>
-              <div className="collapse_text">
-                <ul className="collapse_list">
-                  {item.list.map((theme, i) => <li onClick={() => setActive(theme)} key={i}>{theme.title}</li>)}
-                </ul>
-              </div>
-            </Panel>
-          </Collapse>
-        ))}
+          {lessons.map((item) => (
+            <Collapse
+              expandIconPosition="end"
+              defaultActiveKey={item.number}
+            >
+              <Panel header={<div className="collapse_name">{item.name}</div>}>
+                <div className="collapse_text">
+                  <ul className="collapse_list">
+                    {item.list.map((theme, i) =>
+                      <>
+                        <li onClick={() => { setActive(theme); showModal()}} key={i}>{theme.title}</li>
+                        {window.innerWidth <= 768 &&  <ModalPremiumCourse
+                          show={show}
+                          text={item.name}
+                          title={active.title}
+                          close={() => setShow(false)}
+                        />}
+                      </>
+                    )}
+                  </ul>
+                </div>
+              </Panel>
+            </Collapse>
+          ))}
         </div>
         <div className="details">
-          <div className="details-title">{active.title}</div>
+          <div className="details-title" >{active.title}</div>
           <div className="details-description">{active.description}</div>
         </div>
       </div>
+
+
     </div>
   )
 }

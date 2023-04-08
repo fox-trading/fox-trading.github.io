@@ -62,7 +62,9 @@ body {
   flex: none !important;
   width: 100%;
 }
-.ant-input, .ant-input-password {
+
+.ant-input,
+.ant-input-password {
   @extend %text-style-20px;
   font-weight: 400;
   border: 2px solid #cdae9d;
@@ -73,10 +75,12 @@ body {
   color: $color-title;
 }
 
-.ant-input, .ant-input-password {
+.ant-input,
+.ant-input-password {
+
   &:hover,
   &:focus,
-  &:active  {
+  &:active {
     border-color: $color-sub-title !important;
     border-inline-end-width: 2px !important;
   }
@@ -145,14 +149,12 @@ body {
   background-color: $color-content !important;
   padding: 40px !important;
 
-  .ant-form-item-label > label {
+  .ant-form-item-label>label {
     @extend %text-style-18px-roboto;
     color: $color_title !important;
     font-weight: 600;
 
-    ant-form-item-control-input-content {
-
-    }
+    ant-form-item-control-input-content {}
   }
 }
 
@@ -169,20 +171,19 @@ body {
   overflow: hidden;
   //padding-right: 1px;
 }
+
 .slider {
   .slick-list {
     max-height: 400px;
   }
 }
 
-@media (min-width: 1281px) {
-  
-}
+@media (min-width: 1281px) {}
 
 @media (max-width: 1280px) {
+
   //Header
-  .nav {
-  }
+  .nav {}
 
   .header {
     max-width: none;
@@ -293,6 +294,7 @@ body {
     width: 30vw;
     height: auto;
   }
+
   .current_course_about_name {
     max-width: 300px;
     height: auto;
@@ -349,9 +351,26 @@ body {
 }
 
 @media (max-width: 1024px) {
+
   //HEADER
   .header_menu {
     display: flex;
+  }
+
+  .profile_buttons {
+    display: none;
+  }
+
+  .profile_sidebar_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+  .login {
+    color: $color_title;
+    padding: 0;
+  }
+   
   }
 
   .nav_content__text_drawer {
@@ -377,11 +396,13 @@ body {
   .nav_content__t {
     display: none;
   }
+
   //main
   .big-log {
     width: 100%;
     height: 100%;
   }
+
   .main_img {
     width: 100%;
     height: auto;
@@ -407,14 +428,12 @@ body {
     display: flex;
     flex-direction: column-reverse;
     text-align: center;
+
     .current_course_button {
       justify-content: center;
     }
   }
 
-  .current_course_about {
-
-  }
 
   .current_course_about_content div {
     padding: 0 4px;
@@ -431,6 +450,7 @@ body {
     width: 100%;
     height: auto;
   }
+
   .current_course_about_text {
     //max-width: 250px;
     width: 100%;
@@ -440,6 +460,7 @@ body {
   .current_course_study_list {
     margin-bottom: 20px;
   }
+
   .current_course_study_text {
     //margin-right: 20px;
     //max-width: 28vw;
@@ -465,26 +486,29 @@ body {
   .drawer_nav_content_sub {
     display: flex;
     flex-direction: column;
+    gap: 40px;
   }
 
   .nav_content__text {
-    margin-bottom: 40px;
     color: $color_title;
   }
 }
 
 @media (max-width: 900px) {
+
   //HEADER
   .main_content {
     display: flex;
     flex-direction: column-reverse;
   }
+
   //MAIN
 
   .main_list {
     align-items: center;
 
-    .main_content__name, .main_content__text {
+    .main_content__name,
+    .main_content__text {
       text-align: center;
     }
   }
@@ -492,6 +516,7 @@ body {
   .course_main_content_sub {
     max-width: 300px;
   }
+
   //course
 }
 
@@ -499,18 +524,22 @@ body {
   .block-wrapper {
     margin-top: 80px;
   }
+
   //HEADER
   .header {
     padding-left: 16px;
     padding-right: 16px;
   }
+
   //main
   .main_content__name {
     font-size: 64px;
   }
+
   .main_content__text {
     font-size: 20px;
   }
+
   //slider
 
   .slider_img {
@@ -527,6 +556,7 @@ body {
     .slick-list {
       max-height: 600px;
     }
+
     .slick-next {
       width: 48px;
       height: 48px;
@@ -545,6 +575,7 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
   }
+
   .slider_coin {
     display: flex;
     justify-content: center;
@@ -552,10 +583,12 @@ body {
     height: auto;
     margin-bottom: 16px;
   }
+
   .svg_coin_fox {
     width: 250px;
     height: 269px;
   }
+
   //course
 
   .course_main_content {
@@ -576,6 +609,7 @@ body {
     display: flex;
     justify-content: center;
   }
+
   .course_list {
     display: flex;
     flex-direction: column;
@@ -640,9 +674,11 @@ body {
   .footer_content_icon {
     margin-top: 40px;
   }
+
   .footer_name_company {
     justify-content: unset;
   }
+
   .footer_icons {
     margin: 0;
     margin-right: 24px;
@@ -669,8 +705,7 @@ body {
     max-width: 278px;
   }
 
-  .current_course_study_text {
-  }
+  .current_course_study_text {}
 
   .current_course_ {
     padding-left: 16px;
@@ -681,8 +716,7 @@ body {
     margin-bottom: 0px;
   }
 
-  .current_course_item {
-  }
+  .current_course_item {}
 
   .current_news_carusel {
     display: flex;
@@ -736,6 +770,7 @@ body {
       text-align: center;
     }
   }
+
   .news_box {
     width: 100%;
   }
@@ -832,6 +867,7 @@ body {
       text-align: center !important;
     }
   }
+
   .news_open_button {
     margin-top: 40px;
   }
@@ -855,7 +891,8 @@ body {
     justify-content: flex-start;
     align-items: center;
 
-    .ant-form-item, .ant-form-item-control {
+    .ant-form-item,
+    .ant-form-item-control {
       width: 100%;
     }
 
@@ -896,9 +933,11 @@ body {
     font-size: 48px;
   }
 
-  .course_main_container, .stats_button {
+  .course_main_container,
+  .stats_button {
     display: block;
   }
+
   .main_list {
     display: block;
     width: 100%;
@@ -914,10 +953,12 @@ body {
       max-height: 680px;
     }
   }
+
   //course
   .course_content {
     padding: 0px 16px;
   }
+
   //footer
   .footer_content {
     display: flex;
@@ -928,6 +969,7 @@ body {
     display: flex;
     flex-direction: column;
   }
+
   .footer_content_list {
     margin: 0px;
     margin-top: 40px;
@@ -975,6 +1017,7 @@ body {
     .slick-list {
       max-height: 770px;
     }
+
     .slick-next {
       top: 12%;
     }
@@ -986,6 +1029,7 @@ body {
 }
 
 @media (max-width: 320px) {
+
   //Header
   .nav {
     padding: 10px 0px;
@@ -1103,6 +1147,7 @@ body {
   .current_course_ {
     padding-top: 62px;
   }
+
   .course_main_img {
     width: 90vw;
   }
@@ -1110,6 +1155,7 @@ body {
   .stats_numbers__item {
     width: 46%;
   }
+
   //footer
   .footer_content_list {
     margin: 0px;

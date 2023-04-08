@@ -1,0 +1,10 @@
+
+@import "../../Style/Variables.scss";
+
+.modal_premium {
+    .text {
+        @extend %text-style-18px;
+        margin-top: 20px;
+    
+    }
+}
