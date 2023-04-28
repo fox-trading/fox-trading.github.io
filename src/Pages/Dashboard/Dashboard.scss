@@ -14,10 +14,19 @@
     color: $color-content;
     margin-bottom: 40px;
   }
-
+  .dashboard-content {
+    @media (max-width: 1280px) {
+      padding: 0 40px;
+    }
+    
+    @media (max-width: 768px) {
+      padding: 0 16px;
+    }
+  }
   .ant-card {
     background: $color-content;
     border: 0;
+    overflow: auto;
   }
 
   .ant-card-head-title {
@@ -27,14 +36,14 @@
   &-content {
     .fields {
       display: flex;
-      justify-content: start;
+      justify-content: space-between;
       //align-items: flex-end;
       margin-bottom: 8px;
       &_label {
         @extend %text-style-18px-roboto;
         color: $color_title;
         margin-right: 6px;
-        min-width: 260px;
+        min-width: 60px;
       }
 
       &_value {

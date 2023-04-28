@@ -27,16 +27,19 @@ const Header = ({user, setUser}) => {
   const handleLogin = () => {
     setOpenLogin(true)
     setIsLoginForm(true)
+    setOpenMenu(false);
   }
 
   const handleSingUp = () => {
     setOpenLogin(true)
     setIsLoginForm(false)
+    setOpenMenu(false);
   }
 
   const handleLogout = () => {
     setToken(null);
     setUser(null);
+    setOpenMenu(false);
   }
 
   const isRoot = location.pathname === '/';
@@ -63,6 +66,9 @@ const Header = ({user, setUser}) => {
         <Drawer placement="right" onClose={onCloseMenu} open={openMenu} width="68%" >
           <div className="drawer_nav_content">
             <div className="drawer_nav_content_sub">
+              {user &&
+                  <NavLink to="/dashboard" className={() => isActive('email')} onClick={onCloseMenu} style={{color: "#461e0e"}}>{user.email}</NavLink>
+              }
               <NavLink to="/courses" className={() => isActive('course')} onClick={onCloseMenu}>
                 Курсы
               </NavLink>
@@ -73,12 +79,9 @@ const Header = ({user, setUser}) => {
                 Статистика
               </NavLink>
               {user ? (
-          <div className="profile">
-            <NavLink to="/dashboard" className="login">Личный Кабинет</NavLink>
-            <div className="user-block">
-              <NavLink to="/dashboard" className="email">{user.email}</NavLink>
-              <NavLink to="/"  onClick={handleLogout} className="exit">Выйти</NavLink>
-            </div>
+          <div className="profile_sidebar_buttons">
+            <NavLink to="/dashboard" className={() => isActive('profile')} onClick={onCloseMenu}>Личный Кабинет</NavLink>
+              <NavLink to="/"  onClick={handleLogout} className={() => isActive('exit')} style={{color: "#461e0e"}}>Выйти</NavLink>
           </div>
         ) : (
           <div className="profile_sidebar_buttons">
@@ -123,7 +126,7 @@ const Header = ({user, setUser}) => {
         </div> */}
 
 
-        {user ? (
+        {window.innerWidth > 1024 && user ? (
           <div className="profile">
             <NavLink to="/dashboard" className="login">Личный Кабинет</NavLink>
             <div className="user-block">
