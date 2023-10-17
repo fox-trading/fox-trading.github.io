@@ -1,3 +1,6 @@
+@import "src/Style/Colors";
+@import "src/Style/Variables";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -22,4 +25,14 @@ code {
 .video {
   padding: 0;
   margin: 0;
+}
+
+a {
+  @extend %text-style-18px-roboto;
+  color: $color-text;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $color-point
 }

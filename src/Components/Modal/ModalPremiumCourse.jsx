@@ -1,5 +1,6 @@
 import {Modal} from "antd";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
+import {CoursePremiumDetails} from "../../Pages/CoursePremium/CoursePremiumDetails";
 import "./ModalPremiumCourse.scss"
 
 const ModalPremiumCourse = ({show, close, active}) => {
@@ -11,16 +12,9 @@ const ModalPremiumCourse = ({show, close, active}) => {
       footer={null}
     >
       <div className="modal_premium">
-        <div className="collapse_name">{active.name}</div>
-        <VideoPlayer url={active.videoUrl}/>
-
-        <div className="details-description">
-          <ul className="details-description__list">
-            {active.list.map((theme, i) =>
-              <li className="text" key={i}>{theme.title}</li>
-            )}
-          </ul>
-        </div>
+        <div className="details-title">{active.name}</div>
+        {active.videoUrl && <VideoPlayer url={active.videoUrl}/>}
+        <CoursePremiumDetails active={active}/>
       </div>
     </Modal>
   )

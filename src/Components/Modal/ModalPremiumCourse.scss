@@ -2,10 +2,9 @@
 @import "src/Style/Variables";
 
 .modal_premium {
-  .details-description__list {
-    @extend %text-style-18px;
-    font-family: "Roboto";
-    color: $color_title;
-    margin-top: 20px;
+  .details-title {
+    @extend %text-style-20px;
+    color: $color-title;
+    margin-bottom: 20px;
   }
 }

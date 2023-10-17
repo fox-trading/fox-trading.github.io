@@ -10,7 +10,9 @@
     color: $color-content;
     margin-bottom: 40px;
   }
-
+  .video video {
+    border-radius: 4px;
+  }
   &-content {
     display: flex;
     width: 100%;
@@ -28,7 +30,6 @@
       .ant-collapse-header:hover {
         background: $color-sub-title;
       }
-
 
       @media (max-width:768px) {
         width: 100%;
@@ -54,16 +55,9 @@
         display: none;
        }
       &-title {
-        @extend %text-style-24px;
-        color: $color-text;
+        @extend %text-style-20px;
+        color: $color-content;
         margin-bottom: 20px;
-      }
-
-      &-description__list {
-        @extend %text-style-18px;
-        font-family: "Roboto";
-        color: $color-text;
-        margin-top: 20px;
       }
     }
   }
