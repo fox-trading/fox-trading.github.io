@@ -1,10 +1,11 @@
-
-@import "../../Style/Variables.scss";
+@import "src/Style/Colors";
+@import "src/Style/Variables";
 
 .modal_premium {
-    .text {
-        @extend %text-style-18px;
-        margin-top: 20px;
-    
-    }
+  .details-description__list {
+    @extend %text-style-18px;
+    font-family: "Roboto";
+    color: $color_title;
+    margin-top: 20px;
+  }
 }

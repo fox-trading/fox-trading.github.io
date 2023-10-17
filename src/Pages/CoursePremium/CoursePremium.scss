@@ -20,6 +20,15 @@
       display: flex;
       gap: 20px;
       flex-direction: column;
+      cursor: pointer;
+      .ant-collapse-header {
+        padding: 6px 12px;
+      }
+
+      .ant-collapse-header:hover {
+        background: $color-sub-title;
+      }
+
 
       @media (max-width:768px) {
         width: 100%;
@@ -34,9 +43,8 @@
         li:hover {
           color: $color-text;
         }
-
-      
       }
+
     }
 
     .details {
@@ -51,9 +59,12 @@
         margin-bottom: 20px;
       }
 
-   
+      &-description__list {
+        @extend %text-style-18px;
+        font-family: "Roboto";
+        color: $color-text;
+        margin-top: 20px;
+      }
     }
   }
-
- 
 }

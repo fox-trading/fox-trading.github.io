@@ -5,8 +5,8 @@ import { Alert } from "antd";
 
 import { useAuthHook } from "../../Hooks/useAuthHook";
 import useTokenHook from "../../Hooks/useTokenHook";
+import ReCAPTCHA from "react-google-recaptcha";
 import "./Registration.scss";
-import reCAPTCHA from "react-google-recaptcha";
 
 export default function SignUp({ close, setLogin, setUser }) {
   const { signUp } = useAuthHook();
@@ -134,7 +134,7 @@ export default function SignUp({ close, setLogin, setUser }) {
           Уже есть аккаунт?
         </div>
 
-        <reCAPTCHA sitekey="6Lcl7vokAAAAAGsoYJ2up2LK6wyjE74S02elqUDF" />
+        <ReCAPTCHA sitekey="6Lcl7vokAAAAAGsoYJ2up2LK6wyjE74S02elqUDF" />
 
         <Button
           loading={false}

@@ -1,15 +1,21 @@
-import React, {useEffect, useState} from "react";
-import {Link, NavLink, redirect, useLocation, useNavigate} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import {
+  Link,
+  NavLink,
+  redirect,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import { Drawer } from "antd";
 import { ReactComponent as Logo } from "../../Imgs/Logo.svg";
 import { ReactComponent as Menu } from "../../Imgs/Menu.svg";
-
+import {ReactComponent as Exit} from "../../Imgs/exit.svg";
 import useTokenHook from "../../Hooks/useTokenHook";
 import ModalLogin from "../Modal/ModalLogin";
 
 import "./Header.scss";
 
-const Header = ({user, setUser}) => {
+const Header = ({ user, setUser }) => {
   const location = useLocation();
   const { setToken } = useTokenHook();
   const [openMenu, setOpenMenu] = useState(false);
@@ -25,33 +31,35 @@ const Header = ({user, setUser}) => {
   };
 
   const handleLogin = () => {
-    setOpenLogin(true)
-    setIsLoginForm(true)
+    setOpenLogin(true);
+    setIsLoginForm(true);
     setOpenMenu(false);
-  }
+  };
 
   const handleSingUp = () => {
-    setOpenLogin(true)
-    setIsLoginForm(false)
+    setOpenLogin(true);
+    setIsLoginForm(false);
     setOpenMenu(false);
-  }
+  };
 
   const handleLogout = () => {
     setToken(null);
     setUser(null);
     setOpenMenu(false);
-  }
+  };
 
-  const isRoot = location.pathname === '/';
-  const isActive = (route) => location.pathname.includes(route) ? "active_link" : "nav_content__text";
-
+  const isRoot = location.pathname === "/";
+  const isActive = (route) =>
+    location.pathname.includes(route) ? "active_link" : "nav_content__text";
 
   return (
     <div className="nav">
       <div className="header">
         <div className="nav_content__img">
           {isRoot ? (
-            <a href="#home"><Logo /></a>
+            <a href="#home">
+              <Logo />
+            </a>
           ) : (
             <Link to="/" className="underline">
               <Logo />
@@ -63,32 +71,67 @@ const Header = ({user, setUser}) => {
           <Menu onClick={showDrawer} />
         </div>
 
-        <Drawer placement="right" onClose={onCloseMenu} open={openMenu} width="68%" >
-          <div className="drawer_nav_content">
-            <div className="drawer_nav_content_sub">
-              {user &&
-                  <NavLink to="/dashboard" className={() => isActive('email')} onClick={onCloseMenu} style={{color: "#461e0e"}}>{user.email}</NavLink>
-              }
-              <NavLink to="/courses" className={() => isActive('course')} onClick={onCloseMenu}>
+        <Drawer
+          placement="right"
+          onClose={onCloseMenu}
+          open={openMenu}
+          width="68%"
+        >
+              {user && (
+                <div className="drawer_nav_content_exit">
+                  <NavLink
+                    to="/dashboard"
+                    className={() => isActive("mail")}
+                    onClick={onCloseMenu}
+                    style={{ color: "#461e0e" , fontSize: 16, fontWeight: "inherit"}}
+                  >
+                    {user.email}
+                  </NavLink>
+                  <Exit  onClick={handleLogout}/>
+                </div>
+              )}
+          <div className="drawer_nav_content_sub">
+              <NavLink
+                to="/courses"
+                className={() => isActive("course")}
+                onClick={onCloseMenu}
+              >
                 Курсы
               </NavLink>
-              <NavLink to="/news" className={() => isActive('news')} onClick={onCloseMenu}>
+              <NavLink
+                to="/news"
+                className={() => isActive("news")}
+                onClick={onCloseMenu}
+              >
                 Новости
               </NavLink>
-              <NavLink to="/stats" className={() => isActive('stats')} onClick={onCloseMenu}>
+              <NavLink
+                to="/stats"
+                className={() => isActive("stats")}
+                onClick={onCloseMenu}
+              >
                 Статистика
               </NavLink>
               {user ? (
-          <div className="profile_sidebar_buttons">
-            <NavLink to="/dashboard" className={() => isActive('profile')} onClick={onCloseMenu}>Личный Кабинет</NavLink>
-              <NavLink to="/"  onClick={handleLogout} className={() => isActive('exit')} style={{color: "#461e0e"}}>Выйти</NavLink>
-          </div>
-        ) : (
-          <div className="profile_sidebar_buttons">
-            <button className="login" onClick={handleLogin}>Войти</button>
-            <button className="login" onClick={handleSingUp}>Регистрация</button>
-          </div>
-        )}
+                <div className="profile_sidebar_buttons">
+                  <NavLink
+                    to="/dashboard"
+                    className={() => isActive("dashboard")}
+                    onClick={onCloseMenu}
+                  >
+                    Личный Кабинет
+                  </NavLink>
+                </div>
+              ) : (
+                <div className="profile_sidebar_buttons">
+                  <button className="login" onClick={handleLogin}>
+                    Войти
+                  </button>
+                  <button className="login" onClick={handleSingUp}>
+                    Регистрация
+                  </button>
+                </div>
+              )}
             </div>
             {/*<div className="nav_content__text nav_content__text_drawer disabled">*/}
             {/*  О нас*/}
@@ -99,8 +142,7 @@ const Header = ({user, setUser}) => {
             {/*<div className="nav_content__text nav_content__text_drawer disabled">*/}
             {/*  Мерч*/}
             {/*</div>*/}
-            
-          </div>
+
           {/* <div className="drawer_nav_content__t">
             <div className="header_t">RU</div>
             <div className="header_t">ENG</div>
@@ -108,13 +150,13 @@ const Header = ({user, setUser}) => {
         </Drawer>
 
         <div className="nav_content">
-          <NavLink to="/courses" className={() => isActive('course')}>
+          <NavLink to="/courses" className={() => isActive("course")}>
             Курсы
           </NavLink>
-          <NavLink to="/news" className={() => isActive('news')}>
+          <NavLink to="/news" className={() => isActive("news")}>
             Новости
           </NavLink>
-          <NavLink to="/stats" className={() => isActive('stats')}>
+          <NavLink to="/stats" className={() => isActive("stats")}>
             Статистика
           </NavLink>
           {/*<div className="nav_content__text disabled">О нас</div>*/}
@@ -125,19 +167,28 @@ const Header = ({user, setUser}) => {
           <SelectSmall onClick={() => changeLanguage("ru")} />
         </div> */}
 
-
         {window.innerWidth > 1024 && user ? (
           <div className="profile">
-            <NavLink to="/dashboard" className="login">Личный Кабинет</NavLink>
+            <NavLink to="/dashboard" className="login">
+              Личный Кабинет
+            </NavLink>
             <div className="user-block">
-              <NavLink to="/dashboard" className="email">{user.email}</NavLink>
-              <NavLink to="/"  onClick={handleLogout} className="exit">Выйти</NavLink>
+              <NavLink to="/dashboard" className="email">
+                {user.email}
+              </NavLink>
+              <NavLink to="/" onClick={handleLogout} className="exit">
+                Выйти
+              </NavLink>
             </div>
           </div>
         ) : (
           <div className="profile_buttons">
-            <button className="login" onClick={handleLogin}>Войти</button>
-            <button className="login" onClick={handleSingUp}>Регистрация</button>
+            <button className="login" onClick={handleLogin}>
+              Войти
+            </button>
+            <button className="login" onClick={handleSingUp}>
+              Регистрация
+            </button>
           </div>
         )}
       </div>

@@ -10,7 +10,6 @@ export const useAuthHook = () => {
       const response = await axios.post(`${BASE_API_URL}/users`, params);
       return response
     } catch (error) {
-      console.error(error);
       return error
     }
   };
@@ -20,7 +19,6 @@ export const useAuthHook = () => {
       const response = await axios.post(`${BASE_API_URL}/auth/login`, params);
       return response
     } catch (error) {
-      console.error(error);
       return error
     }
   };
