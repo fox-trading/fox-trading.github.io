@@ -15,7 +15,9 @@ export default function CoursePremium({user}) {
   const navigate = useNavigate();
   const showModal = () => { setShow(true) };
 
-  if (!user?.paid) navigate("/");
+  if (!user?.paid) {
+    navigate("/");
+  }
 
   return (
     <div className="course_premium">
