@@ -3,6 +3,9 @@ const LESSON_ONE = 'https://foxtraderslesson.nyc3.cdn.digitaloceanspaces.com/Les
 const LESSON_TWO = 'https://foxtraderslesson.nyc3.cdn.digitaloceanspaces.com/lesson%202.mp4'
 const LESSON_THREE = 'https://foxtraderslesson.nyc3.cdn.digitaloceanspaces.com/lesson3.mp4'
 const LESSON_FOUR = 'https://foxtraderslesson.nyc3.cdn.digitaloceanspaces.com/lesson4.mp4'
+const LESSON_FIVE = 'https://foxtraderslesson.nyc3.cdn.digitaloceanspaces.com/lesson%205.mp4'
+const LESSON_SIX_PART1 = 'https://foxtraderslesson.nyc3.cdn.digitaloceanspaces.com/lesson6p1.mp4'
+const LESSON_SIX_PART2 = 'https://foxtraderslesson.nyc3.cdn.digitaloceanspaces.com/lesson6p2.mp4'
 
 export const lessons = [
   {
@@ -104,6 +107,23 @@ export const lessons = [
     links: [
       {label: 'Памятка к прошедшему уроку - ', link: 'https://teletype.in/@foxtraders/QsNMwr2Ndkm', linkName: 'teletype'},
     ],
+    list: []
+  },
+
+  {
+    name: 'Урок 5.',
+    videoUrl: LESSON_FIVE,
+    homework: [],
+    links: [],
+    list: []
+  },
+
+  {
+    name: 'Урок 6.',
+    videoUrl: LESSON_SIX_PART1,
+    videoSecondaryUrl: LESSON_SIX_PART2,
+    homework: [],
+    links: [],
     list: []
   },
 ]

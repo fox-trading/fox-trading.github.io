@@ -47,6 +47,7 @@ export default function CoursePremium({user}) {
             <div className="details">
               <div className="details-title">{active.name}</div>
               <VideoPlayer url={active.videoUrl}/>
+              {active.videoSecondaryUrl && <VideoPlayer url={active.videoSecondaryUrl}/>}
               <CoursePremiumDetails active={active}/>
             </div>
           )

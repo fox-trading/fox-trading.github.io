@@ -1,3 +1,4 @@
+import React from "react";
 import {Modal} from "antd";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
 import {CoursePremiumDetails} from "../../Pages/CoursePremium/CoursePremiumDetails";
@@ -14,6 +15,7 @@ const ModalPremiumCourse = ({show, close, active}) => {
       <div className="modal_premium">
         <div className="details-title">{active.name}</div>
         {active.videoUrl && <VideoPlayer url={active.videoUrl}/>}
+        {active.videoSecondaryUrl && <VideoPlayer url={active.videoSecondaryUrl}/>}
         <CoursePremiumDetails active={active}/>
       </div>
     </Modal>
