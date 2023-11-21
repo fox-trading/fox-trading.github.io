@@ -113,7 +113,7 @@ export const lessons = [
   {
     name: 'Урок 5.',
     videoUrl: LESSON_FIVE,
-    homework: [],
+    homework: [{text: 'Будет выполняться в режиме он-лайн в рамках практической группы'}],
     links: [],
     list: []
   },
@@ -122,7 +122,7 @@ export const lessons = [
     name: 'Урок 6.',
     videoUrl: LESSON_SIX_PART1,
     videoSecondaryUrl: LESSON_SIX_PART2,
-    homework: [],
+    homework: [{text: 'Будет выполняться в режиме он-лайн в рамках практической группы'}],
     links: [],
     list: []
   },

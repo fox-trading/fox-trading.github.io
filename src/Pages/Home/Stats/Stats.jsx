@@ -56,11 +56,11 @@ const Stats = ({link}) => {
             <Line type="monotone" dataKey="trades" stroke="#1befef" />
           </LineChart>
         </ResponsiveContainer>
-        <div className="stats_button">
-          <a href="https://tradermake.money/trader/zemXgz/" target="_blank" className="underline">
-            <Button text="Узнать подробнее" />
-          </a>
-        </div>
+        {/*<div className="stats_button">*/}
+        {/*  <a href="https://tradermake.money/trader/zemXgz/" target="_blank" className="underline">*/}
+        {/*    <Button text="Узнать подробнее" />*/}
+        {/*  </a>*/}
+        {/*</div>*/}
       </div>
     </div>
   );
