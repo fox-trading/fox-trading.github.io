@@ -9,7 +9,7 @@ const LESSON_SIX_PART2 = 'https://foxtraderslesson.nyc3.cdn.digitaloceanspaces.c
 
 export const lessons = [
   {
-    name: 'Урок 1. Технический анализ',
+    name: 'Урок 1. Базовые понятия',
     videoUrl: LESSON_ONE,
     list: [
       {
@@ -32,7 +32,7 @@ export const lessons = [
   },
 
   {
-    name: 'Урок 2. Фазы рынка, Скользящие средние, индикатор RSI, Market Profile (Профиль рынка)',
+    name: 'Урок 2. Базовые инструменты аналитики',
     videoUrl: LESSON_TWO,
     homework: [
       {
@@ -70,7 +70,7 @@ export const lessons = [
   },
 
   {
-    name: 'Урок 3. Виды ордеров и принципы их сведения, Ценовые уровни и логика их формирования, Объёмы торгов и их влияние на цену, Дельта и кумулятивная дельта в сочетании с ценовыми уровнями',
+    name: 'Урок 3. Рыночная механика',
     videoUrl: LESSON_THREE,
     homework: [
       {
@@ -93,7 +93,7 @@ export const lessons = [
   },
 
   {
-    name: 'Урок 4. Разворотные свечные модели в сочетании с дельтой, Открытый интерес и его применение, Обьем торгов и его влияние на цену, Сетка Фибоначчи и мифы с ней связанные',
+    name: 'Урок 4. Причины разворота рыночных котировок',
     videoUrl: LESSON_FOUR,
     homework: [
       {
@@ -111,7 +111,7 @@ export const lessons = [
   },
 
   {
-    name: 'Урок 5.',
+    name: 'Урок 5. Управление рисками и как получать прибыль часто ошибаясь',
     videoUrl: LESSON_FIVE,
     homework: [{text: 'Будет выполняться в режиме он-лайн в рамках практической группы'}],
     links: [],
@@ -119,7 +119,7 @@ export const lessons = [
   },
 
   {
-    name: 'Урок 6.',
+    name: 'Урок 6. Построение торговой системы, основные принципы',
     videoUrl: LESSON_SIX_PART1,
     videoSecondaryUrl: LESSON_SIX_PART2,
     homework: [{text: 'Будет выполняться в режиме он-лайн в рамках практической группы'}],
